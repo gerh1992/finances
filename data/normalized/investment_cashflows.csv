@@ -1,0 +1,1 @@
+event_date,broker_account_id,asset_id,event_type,quantity,price_original,gross_amount_original,currency,fx_to_usd,gross_amount_usd,fees_original,source_file,notes

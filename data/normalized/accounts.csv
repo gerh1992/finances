@@ -1,0 +1,12 @@
+account_id,account_name,institution,country,account_type,owner_scope,default_currency,is_active,notes
+cash_manual,Efectivo manual,manual,mixed,cash,personal,ARS,true,Snapshot manual de efectivo al cierre mensual
+bna_ars,Banco Nacion ARS,Banco Nacion,AR,bank,personal,ARS,true,Cuenta bancaria personal en ARS
+bofa_usd,Bank of America USD,Bank of America,US,bank,personal,USD,true,Cuenta bancaria personal en USD
+citibank_usd,Citibank USD,Citibank,US,bank,personal,USD,true,Cuenta bancaria personal en USD
+galicia_ars,Galicia ARS,Galicia,AR,bank,personal,ARS,true,Cuenta bancaria personal en ARS
+galicia_usd,Galicia USD,Galicia,AR,bank,personal,USD,true,Cuenta bancaria personal en USD
+iol_broker,Invertir Online Broker,Invertir Online,AR,broker,personal,ARS,true,Modelar cash y posiciones por separado
+mercadopago_ars,MercadoPago ARS,MercadoPago,AR,wallet,personal,ARS,true,Fuente importante para gasto y movimientos cotidianos
+payoneer_usd,Payoneer USD,Payoneer,US,platform_balance,personal,USD,true,Saldo de plataforma con liquidez de corto plazo
+schwab_broker,Charles Schwab Broker,Charles Schwab,US,broker,personal,USD,true,Modelar cash y posiciones por separado
+wise_usd,Wise USD,Wise,US,wallet,personal,USD,true,Billetera/cuenta operativa en USD

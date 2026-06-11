@@ -1,0 +1,1 @@
+txn_id,account_id,txn_date,posted_date,description_raw,amount_original,currency,direction,normalized_type,counterparty,is_internal_transfer,expense_bucket,needs_review,source_file,notes
