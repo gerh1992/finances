@@ -1,0 +1,74 @@
+read_order:
+  - context/finance-brief.md
+  - context/current-state.md
+  - context/decision-rules.md
+  - 01_system_design.md
+  - 02_data_model.md
+  - 03_operating_process.md
+  - 04_v1_operational_rules.md
+  - 05_source_inventory.md
+  - 06_ingestion_spec.md
+
+sources:
+  canonical_repo:
+    path: /home/ubuntu/.hermes/data/finances
+    role: canonical_local_repo
+
+  normalized_data:
+    path: data/normalized/
+    role: canonical_operational_data
+    notes: Main source of truth for structured finance data in V1.
+
+  manual_inputs:
+    path: data/manual/
+    role: supporting_manual_inputs
+    notes: Useful operational data that can later feed or reconcile normalized tables.
+
+  raw_inputs:
+    path: data/raw/
+    role: source_evidence
+    notes: Original bank/broker/wallet files. Do not treat as canonical transformed output.
+
+  staging:
+    path: data/staging/
+    role: intermediate_transforms
+    notes: Intermediate extraction/parsing artifacts before normalization.
+
+  logs:
+    path: logs/
+    role: narrative_trace
+    notes: Human-readable notes, manual decisions, and interpretation checkpoints.
+
+key_files:
+  accounts:
+    path: data/normalized/accounts.csv
+    status: seeded
+  account_balances:
+    path: data/normalized/account_balances.csv
+    status: initialized_sparse
+  transactions_normalized:
+    path: data/normalized/transactions_normalized.csv
+    status: initialized_sparse
+  monthly_expense_summary:
+    path: data/normalized/monthly_expense_summary.csv
+    status: initialized_sparse
+  investment_positions:
+    path: data/normalized/investment_positions.csv
+    status: initialized_sparse
+  investment_cashflows:
+    path: data/normalized/investment_cashflows.csv
+    status: initialized_sparse
+  fx_rates:
+    path: data/normalized/fx_rates.csv
+    status: initialized_sparse
+  daily_cash_check:
+    path: data/manual/daily_cash_check.csv
+    status: active_minimal_manual_tracking
+
+legacy_compatibility:
+  old_repo_path:
+    path: /home/ubuntu/.hermes/cache/documents/financial-system-v1
+    role: compatibility_symlink
+  old_manual_cash_path:
+    path: /home/ubuntu/.hermes/data/finance/daily_cash_check.csv
+    role: compatibility_symlink
