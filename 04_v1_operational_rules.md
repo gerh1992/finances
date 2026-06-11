@@ -33,16 +33,24 @@ Esta política prioriza:
 
 No busca contabilidad perfecta por fecha de consumo en V1.
 
+### Registro de Deuda Acumulada (Pasivo) al Cierre
+Al cierre de cada mes, la deuda acumulada de la tarjeta de crédito (pendiente de pago) se registra en `account_balances.csv` con un balance con monto **negativo** en su cuenta correspondiente (ej. `galicia_visa_ars`). Esto permite descontar el pasivo flotante de corto plazo y calcular con precisión la liquidez neta real disponible en los balances consolidados.
+
 ---
 
-## 2. Regla de FX ARS→USD
+## 2. Regla de FX ARS→USD y Tenencia Real
 
 ## Moneda base
 La moneda base del sistema es `USD`.
 
-## Dos usos distintos del FX
-### A. FX histórico de cierre
-Para cierres mensuales y análisis histórico, se usa el **promedio entre compra y venta del dólar blue de Ámbito** correspondiente a la fecha de cierre del período, o el día hábil más cercano disponible.
+## Preservación de Monedas Nativas
+* **Principio de Tenencia Real**: Los datos en `account_balances.csv` y `transactions_normalized.csv` se registran estrictamente en su moneda original (pesos en ARS, dólares en USD). El sistema no almacena saldos compuestos pre-convertidos en una única moneda en las tablas base.
+* **Consolidación Dinámica**: Las conversiones a USD para reportes agregados y gráficos se ejecutan dinámicamente en el visualizador o capa lógica, utilizando el factor de conversión `fx_to_usd` almacenado en el snapshot mensual.
+* **Transacciones de Cambio**: En transacciones del tipo `fx_conversion` (ej. vender USD por ARS en efectivo o MEP), se registra de forma inmutable el tipo de cambio real conseguido por el usuario en la operación de mercado.
+
+## Dos usos distintos del FX de Referencia
+### A. FX de cierre (Histórico)
+Para cierres mensuales y análisis histórico, se usa el **promedio entre compra y venta del dólar blue de Ámbito** (o MEP según corresponda) en la fecha de cierre del período. Este valor se registra en `fx_rates.csv` y se asocia a la columna `fx_to_usd` en los snapshots de ese mes.
 
 Ese valor:
 - se guarda,
@@ -50,11 +58,7 @@ Ese valor:
 - se usa para consolidar los datos de ese mes.
 
 ### B. FX operativo actual
-Para conversaciones semanales o decisiones presentes (por ejemplo, si conviene cambiar liquidez hoy), se usa el **FX más reciente disponible**.
-
-Puede ser:
-- provisto manualmente por el usuario una vez por semana,
-- o tomado de la referencia acordada si luego se automatiza de forma robusta.
+Para conversaciones semanales o decisiones presentes, se usa el **FX más reciente disponible** provisto por el usuario o tomado de referencias del mercado en tiempo real.
 
 ## Regla clave
 - **Histórico mensual**: FX del cierre de ese mes.
@@ -64,7 +68,7 @@ Nunca se debe reescribir la historia usando el tipo de cambio de hoy para meses 
 
 ---
 
-## 2. Regla de MercadoPago / billeteras con dos fechas
+## 3. Regla de MercadoPago / billeteras con dos fechas
 
 ### Política V1
 Cuando una fuente tipo billetera trae tanto `TRANSACTION_DATE` como `SETTLEMENT_DATE`, se usa una separación explícita entre:
@@ -104,7 +108,7 @@ Esto evita:
 
 ---
 
-## 4. Regla de cierre mensual
+## 5. Regla de cierre mensual
 
 ### Política V1
 Se usa un **cierre flexible por fuente**.
@@ -128,7 +132,7 @@ Esta política reduce fricción y refleja mejor cómo existen realmente los dato
 
 ---
 
-## 5. Regla de gasto económico
+## 6. Regla de gasto económico
 
 ### Definición
 **Gasto** = salida que reduce patrimonio neto sin crear otro activo propio.
@@ -157,14 +161,14 @@ Si existe duda, el sistema debe preferir:
 - marcar `needs_review`,
 - documentar el motivo,
 - pedir aclaración puntual,
-antes que inventar clasificación.
+- antes que inventar clasificación.
 
 ---
 
-## 6. Regla de buckets de gasto en V1
+## 7. Regla de buckets y tipos de gasto en V1
 
 ### Política
-Los buckets son deliberadamente amplios. V1 prioriza señal útil sobre granularidad excesiva.
+Los buckets son deliberadamente amplios para priorizar señal útil. V1 incorpora además una clasificación por **tipo de gasto** para calcular de forma precisa el Burn Rate de subsistencia y el Fondo de Emergencia.
 
 ### Buckets iniciales
 - `housing`
@@ -176,12 +180,18 @@ Los buckets son deliberadamente amplios. V1 prioriza señal útil sobre granular
 - `hobbies`
 - `other`
 
+### Clasificación por Tipo de Gasto (`expense_type`)
+Cada gasto debe clasificarse bajo una de estas dos categorías en la columna `expense_type`:
+* **`fixed`**: Gastos fijos esenciales/obligatorios indispensables para subsistir (alquiler, expensas, servicios básicos, seguro médico, comida base).
+* **`discretionary`**: Gastos variables/discrecionales que representan opciones de estilo de vida y ocio (salidas, hobbies, compras no esenciales, viajes).
+* **`-`**: Se utiliza para transacciones que no representan gastos (ej. transferencias internas, ingresos, inversiones).
+
 ### Regla
-No analizar item por item salvo que más adelante cambie una decisión o una necesidad concreta del sistema.
+No analizar de forma ultra granular innecesariamente. Agrupar consumos de resúmenes de tarjeta en base a estos dos ejes (bucket y tipo) para mantener el sistema simple y accionable.
 
 ---
 
-## 7. Regla de liquidez
+## 8. Regla de liquidez
 
 ### Liquidity tiers V1
 - `immediate`

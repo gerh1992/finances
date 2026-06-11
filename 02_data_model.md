@@ -80,6 +80,8 @@ Resolver: “cuánto dinero líquido o cuasi líquido hay a fecha de cierre”.
 - `snapshot_date` permite agrupar cierres mensuales; `as_of_date` preserva la fecha real de la fuente.
 - `balance_usd` se calcula como `balance_original * fx_to_usd`.
 - Si el saldo es manual (ej. efectivo), debe quedar explícito en `source_type` y `notes`.
+- **Deuda de Tarjeta como Pasivo**: Las deudas acumuladas en tarjetas de crédito al cierre de mes se registran como un balance con valor **negativo** en su cuenta de tarjeta de crédito correspondiente. Esto permite que la agregación del patrimonio neto consolidado refleje la liquidez neta real del usuario.
+- **Principio de Tenencia Real**: Los saldos se persisten exactamente en su moneda nativa (ej. pesos en ARS, dólares en USD). La unificación a USD para visualizaciones agregadas se calcula dinámicamente en el visualizador, evitando fijar conversiones estáticas en los datos base de saldos.
 
 ---
 
@@ -102,6 +104,7 @@ Resolver: “qué movimientos hubo y cuáles impactan gasto real”.
 - `counterparty`
 - `is_internal_transfer`
 - `expense_bucket`
+- `expense_type` — `fixed` (fijo/esencial) / `discretionary` (variable/opcional) / `-` (si no es gasto)
 - `needs_review`
 - `source_file`
 - `notes`
@@ -132,7 +135,7 @@ No todos los movimientos terminan expuestos al usuario final. Muchos solo sirven
 ---
 
 ## 4. `monthly_expense_summary.csv`
-Resumen mensual de gasto agregado por bucket.
+Resumen mensual de gasto agregado por bucket y tipo de gasto.
 
 ### Propósito
 Resolver: “cuánto salió vivir ese mes, a grandes rasgos”.
@@ -140,6 +143,7 @@ Resolver: “cuánto salió vivir ese mes, a grandes rasgos”.
 ### Columnas
 - `month` — `YYYY-MM`
 - `bucket`
+- `expense_type` — `fixed` / `discretionary`
 - `amount_usd`
 - `currency_basis`
 - `source_method`
