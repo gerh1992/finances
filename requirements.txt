@@ -1,0 +1,8 @@
+pypdf>=4.0.0
+pandas>=2.0.0
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+python-dotenv
+streamlit>=1.35.0
+plotly>=5.20.0

@@ -5,8 +5,19 @@ Thumbs.db
 # Python
 __pycache__/
 *.pyc
+.venv/
 
 # Local scratch / exports
 *.tmp
 *.bak
 *.swp
+
+# Local stuff
+data/test_data/
+data/raw/
+*credentials*.json
+credentials.json
+drive_credentials.json
+.env
+prompt_*.txt
+*.json.tmp

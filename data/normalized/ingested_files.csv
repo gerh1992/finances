@@ -1,0 +1,5 @@
+file_name,file_hash,ingested_at,status,account_id,notes
+2026-05_mercadopago_movements.csv,893dc9c75780a793ed7ab981f1a4a87fda69d914087bbeb5d2a2ace2b9146d35,2026-06-29 17:50:02,success,mercadopago_movements,Parsed 3 rows from Mercado Pago CSV (simulation).
+2026-04_mercadopago_movements_ars.csv,c519b300526933f81b5ec5c5778a79308b359901d67ea2494a917f8b0549781b,2026-07-13 19:59:01,success,mercadopago_ars,"Parsed 110 rows: 110 added, 0 skipped (duplicates)."
+Individual-Positions-2026-09-16-111957.csv,6ef22b9398b22f72c89990e2fd260a620d4cc1332566f3c728427672945bcea3,2026-09-16 15:42:28,success,schwab_broker,Successfully parsed 5 positions and Cash balance ($175.8 USD).
+Individual_XXX938_Transactions_20260916-111746.csv,8070e7fe0c6fa468afe7416653ea7c821c873ee11e760ebb5d398ba965bd673d,2026-09-16 15:42:41,success,schwab_broker,"Successfully parsed transactions: 337 added, 0 skipped (duplicates)."

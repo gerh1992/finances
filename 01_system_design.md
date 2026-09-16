@@ -41,10 +41,15 @@ No incluye en V1:
 
 ## Decisiones de arquitectura
 
-### 1. Archivos crudos vs datos normalizados
-Los PDFs/CSVs originales de bancos y brokers son **inputs**. No son el source of truth.
+### 1. Archivos crudos vs datos normalizados (Descentralización y Seguridad)
+Los PDFs/CSVs originales de bancos y brokers son **inputs crudos**. No son el source of truth y **nunca deben commitearse al repositorio Git** por dos motivos:
+- **Privacidad y Seguridad:** Los extractos contienen datos personales y financieros sumamente sensibles.
+- **Peso del repositorio:** Almacenar binarios inmutables a lo largo de los años infla innecesariamente el tamaño del repo.
 
-El source of truth son los CSVs normalizados que Hermes mantiene después de parsear los extractos.
+**Decisión de Arquitectura:**
+1. La carpeta `data/raw/` se incluye en el `.gitignore`.
+2. En producción/servidores headless, el almacenamiento remoto de los crudos se realiza en **Google Drive**. La autenticación se hace mediante una **Cuenta de Servicio (Service Account)** sin requerir navegación web ni aplicaciones de escritorio.
+3. El source of truth consolidado y auditable en texto plano permanece en el repo bajo `data/normalized/`.
 
 ### 2. Separar snapshots de eventos
 El sistema distingue entre:

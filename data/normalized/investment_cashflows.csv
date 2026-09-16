@@ -1,1 +1,665 @@
 event_date,broker_account_id,asset_id,event_type,quantity,price_original,gross_amount_original,currency,fx_to_usd,gross_amount_usd,fees_original,source_file,notes
+2020-01-20,iol_broker,-,deposit,0.0,0.0,100.0,USD,1.0,100.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 4764087 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - BANCO SUPERVIELLE S.A. | Inversion Argentina Dolares
+2020-01-23,iol_broker,ADCGLOA,unknown,97.1668,1.03,100.0,USD,1.0,100.0,0.0,OperacionesFinalizadas (3).xls,Boleto: 257915 | Mercado: - | Adcap Renta D&#243;lar
+2020-11-09,iol_broker,AL30D,buy,2718.0,38.16,1037.19,USD,1.0,1037.19,13.93,OperacionesFinalizadas (3).xls,Boleto: 4666118 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2020-11-09,iol_broker,-,deposit,0.0,0.0,1050.0,USD,1.0,1050.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 6757242 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Dolares
+2020-11-12,iol_broker,SPY,buy,2.0,356.32,712.63,USD,1.0,712.63,6.05,OperacionesFinalizadas (3).xls,Boleto: 40330 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2020-11-12,iol_broker,AL30C,sell,2718.0,37.9,1030.12,USD,1.0,1030.12,13.88,OperacionesFinalizadas (3).xls,Boleto: 4758743 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2020-11-12,iol_broker,-,internal_transfer,0.0,0.0,1024.97,USD,1.0,1024.97,0.0,MovimientosHistoricos (1).xls,Mov ID: 6777544 | Dep&#243;sito por transferencia interna | Inversion Estados Unidos Dolares
+2020-11-12,iol_broker,-,internal_transfer,0.0,0.0,1024.97,USD,1.0,1024.97,0.0,MovimientosHistoricos (1).xls,Mov ID: 6777543 | Extracci&#243;n por Transferencia interna | Inversion Argentina Dolares
+2020-12-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 6939669 | Cr&#233;dito | Inversion Argentina Dolares
+2020-12-02,iol_broker,AL30,buy,1781.0,5503.0,98008.43,ARS,0.006757,662.24,499.84,OperacionesFinalizadas (3).xls,Boleto: 5065242 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2020-12-02,iol_broker,-,deposit,0.0,0.0,100000.0,ARS,0.006757,675.7,0.0,MovimientosHistoricos (1).xls,Mov ID: 6970208 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2020-12-09,iol_broker,SPY,buy,2.0,369.65,739.3,USD,1.0,739.3,6.05,OperacionesFinalizadas (3).xls,Boleto: 50913 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2020-12-09,iol_broker,AL30C,sell,1781.0,37.17,662.0,USD,1.0,662.0,9.05,OperacionesFinalizadas (3).xls,Boleto: 5124904 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2020-12-09,iol_broker,-,internal_transfer,0.0,0.0,658.69,USD,1.0,658.69,0.0,MovimientosHistoricos (1).xls,Mov ID: 6989420 | Dep&#243;sito por transferencia interna | Inversion Estados Unidos Dolares
+2020-12-09,iol_broker,-,internal_transfer,0.0,0.0,658.69,USD,1.0,658.69,0.0,MovimientosHistoricos (1).xls,Mov ID: 6989419 | Extracci&#243;n por Transferencia interna | Inversion Argentina Dolares
+2021-01-01,iol_broker,-,interest,0.0,0.0,29.73,ARS,0.006897,0.21,0.0,MovimientosHistoricos (1).xls,Mov ID: 7177938 | Cr&#233;dito | Inversion Argentina Pesos
+2021-01-04,iol_broker,-,deposit,0.0,0.0,90000.0,ARS,0.006897,620.73,0.0,MovimientosHistoricos (1).xls,Mov ID: 7238314 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2021-01-05,iol_broker,AL30,buy,1534.0,5797.0,88925.98,ARS,0.006897,613.32,453.52,OperacionesFinalizadas (3).xls,Boleto: 36750 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-01-08,iol_broker,SPY,buy,2.0,380.76,761.52,USD,1.0,761.52,6.05,OperacionesFinalizadas (3).xls,Boleto: 4101 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2021-01-08,iol_broker,AL30C,sell,1534.0,39.17,600.87,USD,1.0,600.87,8.35,OperacionesFinalizadas (3).xls,Boleto: 119073 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-01-29,iol_broker,AL30,buy,1749.0,5649.0,98801.01,ARS,0.006667,658.71,503.89,OperacionesFinalizadas (3).xls,Boleto: 495680 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-01-29,iol_broker,-,deposit,0.0,0.0,100000.0,ARS,0.006667,666.7,0.0,MovimientosHistoricos (1).xls,Mov ID: 7386660 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2021-02-01,iol_broker,SPY,dividend,0.0,0.0,6.27,USD,1.0,6.27,0.05,MovimientosHistoricos (1).xls,Mov ID: 30600709 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2021-02-01,iol_broker,-,interest,0.0,0.0,110.86,ARS,0.006667,0.74,0.0,MovimientosHistoricos (1).xls,Mov ID: 7499910 | Cr&#233;dito | Inversion Argentina Pesos
+2021-02-03,iol_broker,SPY,buy,1.0,382.59,382.59,USD,1.0,382.59,6.05,OperacionesFinalizadas (3).xls,Boleto: 25492 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2021-02-03,iol_broker,AL30C,sell,1749.0,37.07,648.35,USD,1.0,648.35,9.24,OperacionesFinalizadas (3).xls,Boleto: 567815 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-02-04,iol_broker,AL30D,buy,1315.0,37.69,495.62,USD,1.0,495.62,7.06,OperacionesFinalizadas (3).xls,Boleto: 589288 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-02-04,iol_broker,-,deposit,0.0,0.0,500.0,USD,1.0,500.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 7563431 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Dolares
+2021-02-08,iol_broker,SPY,buy,2.0,389.29,778.58,USD,1.0,778.58,6.05,OperacionesFinalizadas (3).xls,Boleto: 30045 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2021-02-08,iol_broker,AL30C,sell,1315.0,36.84,484.45,USD,1.0,484.45,6.93,OperacionesFinalizadas (3).xls,Boleto: 652618 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-02-25,iol_broker,AL30,buy,1930.0,5120.0,98816.0,ARS,0.006757,667.7,503.96,OperacionesFinalizadas (3).xls,Boleto: 909714 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-02-25,iol_broker,-,deposit,0.0,0.0,100000.0,ARS,0.006757,675.7,0.0,MovimientosHistoricos (1).xls,Mov ID: 7651594 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2021-03-01,iol_broker,-,interest,0.0,0.0,62.72,ARS,0.006757,0.42,0.0,MovimientosHistoricos (1).xls,Mov ID: 7744743 | Cr&#233;dito | Inversion Argentina Pesos
+2021-03-02,iol_broker,SPY,buy,1.0,387.41,387.41,USD,1.0,387.41,6.05,OperacionesFinalizadas (3).xls,Boleto: 50635 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2021-03-02,iol_broker,AL30C,sell,1930.0,35.65,688.05,USD,1.0,688.05,9.96,OperacionesFinalizadas (3).xls,Boleto: 972862 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-03-02,iol_broker,AL30D,buy,1350.0,36.62,494.37,USD,1.0,494.37,7.15,OperacionesFinalizadas (3).xls,Boleto: 977038 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-03-02,iol_broker,-,deposit,0.0,0.0,500.0,USD,1.0,500.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 7824680 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Dolares
+2021-03-05,iol_broker,SPY,buy,2.0,376.14,752.28,USD,1.0,752.28,6.05,OperacionesFinalizadas (3).xls,Boleto: 54302 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2021-03-05,iol_broker,AL30C,sell,1350.0,35.15,474.53,USD,1.0,474.53,6.88,OperacionesFinalizadas (3).xls,Boleto: 1041862 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-03-16,iol_broker,-,interest,0.0,0.0,2.47,USD,1.0,2.47,0.0,MovimientosHistoricos (1).xls,Mov ID: 7888680 | Cr&#233;dito | Inversion Argentina Dolares
+2021-03-16,iol_broker,-,interest,0.0,0.0,148.48,ARS,0.006897,1.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 7887908 | Cr&#233;dito | Inversion Argentina Pesos
+2021-03-16,iol_broker,-,interest,0.0,0.0,3.44,USD,1.0,3.44,0.0,MovimientosHistoricos (1).xls,Mov ID: 7886465 | Cr&#233;dito | Inversion Estados Unidos Dolares
+2021-03-30,iol_broker,-,deposit,0.0,0.0,100000.0,ARS,0.006897,689.7,0.0,MovimientosHistoricos (1).xls,Mov ID: 7940077 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2021-04-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 8084879 | Cr&#233;dito | Inversion Argentina Dolares
+2021-04-01,iol_broker,-,interest,0.0,0.0,229.21,ARS,0.006897,1.58,0.0,MovimientosHistoricos (1).xls,Mov ID: 8039182 | Cr&#233;dito | Inversion Argentina Pesos
+2021-04-13,iol_broker,AL30,buy,1991.0,4964.0,98833.24,ARS,0.006897,681.65,504.05,OperacionesFinalizadas (3).xls,Boleto: 1489998 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-04-21,iol_broker,SPY,buy,1.0,413.71,413.71,USD,1.0,413.71,6.05,OperacionesFinalizadas (3).xls,Boleto: 81355 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2021-04-21,iol_broker,AL30C,sell,1991.0,32.5,647.08,USD,1.0,647.08,9.6,OperacionesFinalizadas (3).xls,Boleto: 1599828 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-05-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 8353306 | Cr&#233;dito | Inversion Argentina Dolares
+2021-05-01,iol_broker,-,interest,0.0,0.0,1112.01,ARS,0.006579,7.32,0.0,MovimientosHistoricos (1).xls,Mov ID: 8283572 | Cr&#233;dito | Inversion Argentina Pesos
+2021-05-04,iol_broker,SPY,dividend,0.0,0.0,15.21,USD,1.0,15.21,0.13,MovimientosHistoricos (1).xls,Mov ID: 33057162 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2021-06-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 8654045 | Cr&#233;dito | Inversion Argentina Dolares
+2021-06-01,iol_broker,-,interest,0.0,0.0,132.0,ARS,0.006579,0.87,0.0,MovimientosHistoricos (1).xls,Mov ID: 8586530 | Cr&#233;dito | Inversion Argentina Pesos
+2021-07-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 8944364 | Cr&#233;dito | Inversion Argentina Dolares
+2021-07-01,iol_broker,-,interest,0.0,0.0,133.08,ARS,0.005714,0.76,0.0,MovimientosHistoricos (1).xls,Mov ID: 8930076 | Cr&#233;dito | Inversion Argentina Pesos
+2021-07-26,iol_broker,AL30,buy,2444.0,6066.0,148253.04,ARS,0.005714,847.12,756.1,OperacionesFinalizadas (3).xls,Boleto: 3122095 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-07-26,iol_broker,-,deposit,0.0,0.0,150000.0,ARS,0.005714,857.1,0.0,MovimientosHistoricos (1).xls,Mov ID: 9123212 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2021-07-28,iol_broker,SPY,buy,2.0,439.57,879.14,USD,1.0,879.14,6.05,OperacionesFinalizadas (3).xls,Boleto: 135618 | Mercado: NYSE | Spdr Trust Series 1 Etf (Nyse)
+2021-07-28,iol_broker,AL30C,sell,2444.0,35.3,862.73,USD,1.0,862.73,13.09,OperacionesFinalizadas (3).xls,Boleto: 3174098 | Mercado: BCBA | Bono Rep. Argentina Usd Step Up 2030
+2021-08-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 9335991 | Cr&#233;dito | Inversion Argentina Dolares
+2021-08-01,iol_broker,-,interest,0.0,0.0,145.05,ARS,0.005714,0.83,0.0,MovimientosHistoricos (1).xls,Mov ID: 9290555 | Cr&#233;dito | Inversion Argentina Pesos
+2021-08-02,iol_broker,-,interest,0.0,0.0,4.31,USD,1.0,4.31,0.0,MovimientosHistoricos (1).xls,Mov ID: 9350940 | Cr&#233;dito | Inversion Estados Unidos Dolares
+2021-08-03,iol_broker,SPY,dividend,0.0,0.0,17.73,USD,1.0,17.73,0.16,MovimientosHistoricos (1).xls,Mov ID: 36065163 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2021-09-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 9701607 | Cr&#233;dito | Inversion Argentina Dolares
+2021-09-01,iol_broker,-,interest,0.0,0.0,167.24,ARS,0.005714,0.96,0.0,MovimientosHistoricos (1).xls,Mov ID: 9594949 | Cr&#233;dito | Inversion Argentina Pesos
+2021-10-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 10107255 | Cr&#233;dito | Inversion Argentina Dolares
+2021-10-01,iol_broker,-,interest,0.0,0.0,166.43,ARS,0.005714,0.95,0.0,MovimientosHistoricos (1).xls,Mov ID: 10044711 | Cr&#233;dito | Inversion Argentina Pesos
+2021-11-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 10460870 | Cr&#233;dito | Inversion Argentina Dolares
+2021-11-01,iol_broker,-,interest,0.0,0.0,175.31,ARS,0.004878,0.86,0.0,MovimientosHistoricos (1).xls,Mov ID: 10302497 | Cr&#233;dito | Inversion Argentina Pesos
+2021-11-02,iol_broker,SPY,dividend,0.0,0.0,21.25,USD,1.0,21.25,0.18,MovimientosHistoricos (1).xls,Mov ID: 38822294 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2021-12-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 10870992 | Cr&#233;dito | Inversion Argentina Dolares
+2021-12-01,iol_broker,-,interest,0.0,0.0,168.36,ARS,0.004878,0.82,0.0,MovimientosHistoricos (1).xls,Mov ID: 10769097 | Cr&#233;dito | Inversion Argentina Pesos
+2022-01-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 11211454 | Cr&#233;dito | Inversion Argentina Dolares
+2022-01-01,iol_broker,-,interest,0.0,0.0,177.61,ARS,0.004878,0.87,0.0,MovimientosHistoricos (1).xls,Mov ID: 11123324 | Cr&#233;dito | Inversion Argentina Pesos
+2022-02-01,iol_broker,SPY,dividend,0.0,0.0,24.34,USD,1.0,24.34,0.21,MovimientosHistoricos (1).xls,Mov ID: 41248510 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2022-02-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 11591492 | Cr&#233;dito | Inversion Argentina Dolares
+2022-02-01,iol_broker,-,interest,0.0,0.0,179.73,ARS,0.004762,0.86,0.0,MovimientosHistoricos (1).xls,Mov ID: 11530600 | Cr&#233;dito | Inversion Argentina Pesos
+2022-03-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 11919583 | Cr&#233;dito | Inversion Argentina Dolares
+2022-03-01,iol_broker,-,interest,0.0,0.0,162.24,ARS,0.004762,0.77,0.0,MovimientosHistoricos (1).xls,Mov ID: 11748183 | Cr&#233;dito | Inversion Argentina Pesos
+2022-04-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 12327313 | Cr&#233;dito | Inversion Argentina Dolares
+2022-04-01,iol_broker,-,interest,0.0,0.0,186.86,ARS,0.004762,0.89,0.0,MovimientosHistoricos (1).xls,Mov ID: 12130881 | Cr&#233;dito | Inversion Argentina Pesos
+2022-05-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 12683316 | Cr&#233;dito | Inversion Argentina Dolares
+2022-05-01,iol_broker,-,interest,0.0,0.0,195.59,ARS,0.004651,0.91,0.0,MovimientosHistoricos (1).xls,Mov ID: 12642162 | Cr&#233;dito | Inversion Argentina Pesos
+2022-05-02,iol_broker,SPY,dividend,0.0,0.0,20.33,USD,1.0,20.33,0.17,MovimientosHistoricos (1).xls,Mov ID: 43177531 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2022-06-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 13074781 | Cr&#233;dito | Inversion Argentina Dolares
+2022-06-01,iol_broker,-,interest,0.0,0.0,224.13,ARS,0.004651,1.04,0.0,MovimientosHistoricos (1).xls,Mov ID: 12987274 | Cr&#233;dito | Inversion Argentina Pesos
+2022-06-03,iol_broker,SPY,buy,24.0,4320.5,103692.0,ARS,0.004651,482.27,727.71,OperacionesFinalizadas (3).xls,Boleto: 1778123 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2022-06-03,iol_broker,-,deposit,0.0,0.0,100000.0,ARS,0.004651,465.1,0.0,MovimientosHistoricos (1).xls,Mov ID: 13104239 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2022-07-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 13463066 | Cr&#233;dito | Inversion Argentina Dolares
+2022-07-01,iol_broker,-,interest,0.0,0.0,485.75,ARS,0.004651,2.26,0.0,MovimientosHistoricos (1).xls,Mov ID: 13371866 | Cr&#233;dito | Inversion Argentina Pesos
+2022-07-06,iol_broker,-,deposit,0.0,0.0,150000.0,ARS,0.004651,697.65,0.0,MovimientosHistoricos (1).xls,Mov ID: 13538062 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2022-07-07,iol_broker,XLE,buy,1.0,9550.5,9550.5,ARS,0.004651,44.42,67.02,OperacionesFinalizadas (3).xls,Boleto: 2157082 | Mercado: BCBA | Cedear Energy Select Sector Sp
+2022-07-12,iol_broker,SPY,buy,20.0,5744.5,114890.0,ARS,0.004651,534.35,806.29,OperacionesFinalizadas (3).xls,Boleto: 2240834 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2022-07-13,iol_broker,XLE,buy,14.0,10168.5,142359.0,ARS,0.004651,662.11,999.09,OperacionesFinalizadas (3).xls,Boleto: 2262626 | Mercado: BCBA | Cedear Energy Select Sector Sp
+2022-07-13,iol_broker,-,deposit,0.0,0.0,150000.0,ARS,0.004651,697.65,0.0,MovimientosHistoricos (1).xls,Mov ID: 13581056 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2022-08-01,iol_broker,SPY,fee,0.0,0.0,8.39,ARS,0.00339,0.03,8.39,MovimientosHistoricos (1).xls,Mov ID: 45338455 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2022-08-01,iol_broker,SPY,dividend,0.0,0.0,1.32,USD,1.0,1.32,0.0,MovimientosHistoricos (1).xls,Mov ID: 45338454 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2022-08-01,iol_broker,SPY,dividend,0.0,0.0,23.45,USD,1.0,23.45,0.21,MovimientosHistoricos (1).xls,Mov ID: 45327716 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2022-08-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 13931305 | Cr&#233;dito | Inversion Argentina Dolares
+2022-08-01,iol_broker,-,interest,0.0,0.0,1855.96,ARS,0.00339,6.29,0.0,MovimientosHistoricos (1).xls,Mov ID: 13876703 | Cr&#233;dito | Inversion Argentina Pesos
+2022-08-08,iol_broker,SPY,buy,25.0,5775.0,144375.0,ARS,0.00339,489.43,1013.23,OperacionesFinalizadas (3).xls,Boleto: 2746721 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2022-08-08,iol_broker,-,deposit,0.0,0.0,150000.0,ARS,0.00339,508.5,0.0,MovimientosHistoricos (1).xls,Mov ID: 14027291 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2022-09-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 14384857 | Cr&#233;dito | Inversion Argentina Dolares
+2022-09-01,iol_broker,-,interest,0.0,0.0,1558.73,ARS,0.003448,5.37,0.0,MovimientosHistoricos (1).xls,Mov ID: 14338252 | Cr&#233;dito | Inversion Argentina Pesos
+2022-09-05,iol_broker,SPY,buy,29.0,5664.0,164256.0,ARS,0.003448,566.35,1152.75,OperacionesFinalizadas (3).xls,Boleto: 3148844 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2022-09-05,iol_broker,-,deposit,0.0,0.0,150000.0,ARS,0.003448,517.2,0.0,MovimientosHistoricos (1).xls,Mov ID: 14438531 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2022-09-23,iol_broker,XLE,fee,0.0,0.0,31.19,ARS,0.003279,0.1,31.19,MovimientosHistoricos (1).xls,Mov ID: 46740847 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2022-09-23,iol_broker,XLE,dividend,0.0,0.0,4.44,USD,1.0,4.44,0.0,MovimientosHistoricos (1).xls,Mov ID: 46740846 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2022-10-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 14850822 | Cr&#233;dito | Inversion Argentina Dolares
+2022-10-01,iol_broker,-,interest,0.0,0.0,1390.18,ARS,0.003279,4.56,0.0,MovimientosHistoricos (1).xls,Mov ID: 14754594 | Cr&#233;dito | Inversion Argentina Pesos
+2022-10-04,iol_broker,AAPL,buy,33.0,4496.33,148379.0,ARS,0.003279,486.53,1041.33,OperacionesFinalizadas (3).xls,Boleto: 3602043 | Mercado: BCBA | Cedear Apple Inc.
+2022-10-04,iol_broker,-,deposit,0.0,0.0,150000.0,ARS,0.003279,491.85,0.0,MovimientosHistoricos (1).xls,Mov ID: 14877275 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2022-11-01,iol_broker,SPY,buy,25.0,5881.5,147037.5,ARS,0.003226,474.34,1031.91,OperacionesFinalizadas (3).xls,Boleto: 3978723 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2022-11-01,iol_broker,SPY,dividend,0.0,0.0,23.74,USD,1.0,23.74,0.21,MovimientosHistoricos (1).xls,Mov ID: 47539551 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2022-11-01,iol_broker,-,deposit,0.0,0.0,150000.0,ARS,0.003226,483.9,0.0,MovimientosHistoricos (1).xls,Mov ID: 15287359 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2022-11-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 15276127 | Cr&#233;dito | Inversion Argentina Dolares
+2022-11-01,iol_broker,-,interest,0.0,0.0,1145.71,ARS,0.003226,3.7,0.0,MovimientosHistoricos (1).xls,Mov ID: 15148059 | Cr&#233;dito | Inversion Argentina Pesos
+2022-11-03,iol_broker,SPY,fee,0.0,0.0,41.54,ARS,0.003226,0.13,41.54,MovimientosHistoricos (1).xls,Mov ID: 47620382 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2022-11-03,iol_broker,SPY,dividend,0.0,0.0,5.47,USD,1.0,5.47,0.0,MovimientosHistoricos (1).xls,Mov ID: 47620381 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2022-11-14,iol_broker,AAPL,fee,0.0,0.0,0.99,ARS,0.003226,0.0,0.99,MovimientosHistoricos (1).xls,Mov ID: 47857321 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2022-11-14,iol_broker,AAPL,dividend,0.0,0.0,0.49,USD,1.0,0.49,0.0,MovimientosHistoricos (1).xls,Mov ID: 47857320 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2022-12-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 15718645 | Cr&#233;dito | Inversion Argentina Dolares
+2022-12-01,iol_broker,-,interest,0.0,0.0,1597.81,ARS,0.003125,4.99,0.0,MovimientosHistoricos (1).xls,Mov ID: 15568888 | Cr&#233;dito | Inversion Argentina Pesos
+2022-12-23,iol_broker,XLE,fee,0.0,0.0,38.1,ARS,0.002899,0.11,38.1,MovimientosHistoricos (1).xls,Mov ID: 48846199 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2022-12-23,iol_broker,XLE,dividend,0.0,0.0,4.51,USD,1.0,4.51,0.0,MovimientosHistoricos (1).xls,Mov ID: 48846198 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2023-01-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 16192845 | Cr&#233;dito | Inversion Argentina Dolares
+2023-01-01,iol_broker,-,interest,0.0,0.0,1338.83,ARS,0.002899,3.88,0.0,MovimientosHistoricos (1).xls,Mov ID: 16092804 | Cr&#233;dito | Inversion Argentina Pesos
+2023-02-01,iol_broker,SPY,dividend,0.0,0.0,7.66,USD,1.0,7.66,0.0,MovimientosHistoricos (1).xls,Mov ID: 50301024 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2023-02-01,iol_broker,SPY,fee,0.0,0.0,69.33,ARS,0.00274,0.19,69.33,MovimientosHistoricos (1).xls,Mov ID: 50301025 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-02-01,iol_broker,SPY,dividend,0.0,0.0,26.49,USD,1.0,26.49,0.23,MovimientosHistoricos (1).xls,Mov ID: 50297388 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2023-02-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 16866771 | Cr&#233;dito | Inversion Argentina Dolares
+2023-02-01,iol_broker,-,interest,0.0,0.0,1376.41,ARS,0.00274,3.77,0.0,MovimientosHistoricos (1).xls,Mov ID: 16730841 | Cr&#233;dito | Inversion Argentina Pesos
+2023-02-17,iol_broker,AAPL,fee,0.0,0.0,1.19,ARS,0.00274,0.0,1.19,MovimientosHistoricos (1).xls,Mov ID: 50983685 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-02-17,iol_broker,AAPL,dividend,0.0,0.0,0.49,USD,1.0,0.49,0.0,MovimientosHistoricos (1).xls,Mov ID: 50983684 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2023-03-01,iol_broker,-,interest,0.0,0.0,0.01,USD,1.0,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 17517818 | Cr&#233;dito | Inversion Argentina Dolares
+2023-03-01,iol_broker,-,interest,0.0,0.0,1299.79,ARS,0.00274,3.56,0.0,MovimientosHistoricos (1).xls,Mov ID: 17321705 | Cr&#233;dito | Inversion Argentina Pesos
+2023-03-02,schwab_broker,-,deposit,0.0,0.0,1000.0,USD,1.0,1000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Wire Received | WIRED FUNDS RECEIVED
+2023-03-03,schwab_broker,-,deposit,0.0,0.0,1000.0,USD,1.0,1000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr CITIBANK NA, NOT AVAILABLE"
+2023-03-03,schwab_broker,-,deposit,0.0,0.0,48000.0,USD,1.0,48000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Wire Received | WIRED FUNDS RECEIVED
+2023-03-23,iol_broker,GOOGL,buy,410.0,719.47,294982.5,ARS,0.002564,756.34,2070.19,OperacionesFinalizadas (3).xls,Boleto: 2140883 | Mercado: BCBA | Cedear Alphabet Inc. Cl. A
+2023-03-23,iol_broker,-,deposit,0.0,0.0,300000.0,ARS,0.002564,769.2,0.0,MovimientosHistoricos (1).xls,Mov ID: 17816402 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2023-03-27,iol_broker,XLE,fee,0.0,0.0,41.53,ARS,0.002564,0.11,41.53,MovimientosHistoricos (1).xls,Mov ID: 52221750 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-03-27,iol_broker,XLE,dividend,0.0,0.0,4.17,USD,1.0,4.17,0.0,MovimientosHistoricos (1).xls,Mov ID: 52221749 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2023-03-27,iol_broker,-,deposit,0.0,0.0,300000.0,ARS,0.002564,769.2,0.0,MovimientosHistoricos (1).xls,Mov ID: 17836815 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2023-03-28,iol_broker,GOOGL,buy,435.0,680.0,295800.0,ARS,0.002564,758.43,2075.92,OperacionesFinalizadas (3).xls,Boleto: 2212212 | Mercado: BCBA | Cedear Alphabet Inc. Cl. A
+2023-03-30,schwab_broker,-,interest,0.0,0.0,16.75,USD,1.0,16.75,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 02/27-03/29
+2023-03-30,schwab_broker,-,fee,0.0,0.0,5.02,USD,1.0,5.02,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 02/27-03/29
+2023-04-01,iol_broker,-,interest,0.0,0.0,0.02,USD,1.0,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 18186577 | Cr&#233;dito | Inversion Argentina Dolares
+2023-04-01,iol_broker,-,interest,0.0,0.0,4386.59,ARS,0.002564,11.25,0.0,MovimientosHistoricos (1).xls,Mov ID: 18169697 | Cr&#233;dito | Inversion Argentina Pesos
+2023-04-27,schwab_broker,-,interest,0.0,0.0,17.36,USD,1.0,17.36,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 03/30-04/26
+2023-04-27,schwab_broker,-,fee,0.0,0.0,5.2,USD,1.0,5.2,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 03/30-04/26
+2023-05-01,iol_broker,-,interest,0.0,0.0,0.02,USD,1.0,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 18946462 | Cr&#233;dito | Inversion Argentina Dolares
+2023-05-01,iol_broker,-,interest,0.0,0.0,1756.76,ARS,0.002564,4.5,0.0,MovimientosHistoricos (1).xls,Mov ID: 18758281 | Cr&#233;dito | Inversion Argentina Pesos
+2023-05-04,iol_broker,SPY,fee,0.0,0.0,69.84,ARS,0.002564,0.18,69.84,MovimientosHistoricos (1).xls,Mov ID: 53903051 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-05-04,iol_broker,SPY,dividend,0.0,0.0,6.48,USD,1.0,6.48,0.0,MovimientosHistoricos (1).xls,Mov ID: 53903050 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2023-05-08,schwab_broker,SPY,buy,2.0,412.9,825.8,USD,1.0,825.8,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SPDR S&P ...500 ETF
+2023-05-10,iol_broker,SPY,dividend,0.0,0.0,23.12,USD,1.0,23.12,0.19,MovimientosHistoricos (1).xls,Mov ID: 54224638 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2023-05-15,schwab_broker,XLE,buy,200.0,78.8617,15772.34,USD,1.0,15772.34,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | ENERGY SELECT SECTOR SPDR ETF
+2023-05-19,iol_broker,AAPL,fee,0.0,0.0,1.49,ARS,0.00202,0.0,1.49,MovimientosHistoricos (1).xls,Mov ID: 54824964 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-05-19,iol_broker,AAPL,dividend,0.0,0.0,0.51,USD,1.0,0.51,0.0,MovimientosHistoricos (1).xls,Mov ID: 54824963 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2023-05-24,schwab_broker,SPY,buy,40.0,410.1978,16407.91,USD,1.0,16407.91,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SPDR S&P ...500 ETF
+2023-05-24,schwab_broker,SCHB,buy,100.0,47.8399,4783.99,USD,1.0,4783.99,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2023-05-24,schwab_broker,SCHF,buy,150.0,34.855,5228.25,USD,1.0,5228.25,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB INTERNATIONAL EQUITY ETF
+2023-05-24,schwab_broker,SCHZ,buy,120.0,46.085,5530.2,USD,1.0,5530.2,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US AGGREGATE BONDETF
+2023-05-30,schwab_broker,-,interest,0.0,0.0,16.1,USD,1.0,16.1,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 04/27-05/29
+2023-05-30,schwab_broker,-,fee,0.0,0.0,4.83,USD,1.0,4.83,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 04/27-05/29
+2023-06-01,iol_broker,-,interest,0.0,0.0,0.02,USD,1.0,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 19856914 | Cr&#233;dito | Inversion Argentina Dolares
+2023-06-01,iol_broker,-,interest,0.0,0.0,1887.4,ARS,0.00202,3.81,0.0,MovimientosHistoricos (1).xls,Mov ID: 19626687 | Cr&#233;dito | Inversion Argentina Pesos
+2023-06-02,iol_broker,-,deposit,0.0,0.0,200000.0,ARS,0.00202,404.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 19927669 | Dep&#243;sito de Fondos - Transferencia electr&#243;nica - Banco Industrial | Inversion Argentina Pesos
+2023-06-06,iol_broker,SPY,buy,18.0,10536.39,189655.0,ARS,0.00202,383.1,1331.0,OperacionesFinalizadas (3).xls,Boleto: 4564611 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2023-06-07,schwab_broker,SCHZ,fee,0.0,0.0,4.39,USD,1.0,4.39,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-06-07,schwab_broker,SCHZ,dividend,0.0,0.0,14.64,USD,1.0,14.64,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SCHWAB US AGGREGATE BONDETF
+2023-06-23,schwab_broker,XLE,dividend,0.0,0.0,141.17,USD,1.0,141.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2023-06-23,schwab_broker,XLE,fee,0.0,0.0,42.35,USD,1.0,42.35,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2023-06-26,iol_broker,XLE,fee,0.0,0.0,45.3,ARS,0.00202,0.09,45.3,MovimientosHistoricos (1).xls,Mov ID: 56575536 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-06-26,iol_broker,XLE,dividend,0.0,0.0,3.7,USD,1.0,3.7,0.0,MovimientosHistoricos (1).xls,Mov ID: 56575535 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2023-06-26,schwab_broker,XLE,buy,1.262,78.3051,98.82,USD,1.0,98.82,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2023-06-26,schwab_broker,SCHB,fee,0.0,0.0,5.57,USD,1.0,5.57,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2023-06-26,schwab_broker,SCHB,dividend,0.0,0.0,18.55,USD,1.0,18.55,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2023-06-26,schwab_broker,SCHF,fee,0.0,0.0,17.67,USD,1.0,17.67,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB INTERNATIONAL EQUITY ETF
+2023-06-26,schwab_broker,SCHF,dividend,0.0,0.0,58.89,USD,1.0,58.89,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB INTERNATIONAL EQUITY ETF
+2023-06-27,schwab_broker,SCHF,buy,1.1735,35.1261,41.22,USD,1.0,41.22,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB INTERNATIONAL EQUITY ETF
+2023-06-27,schwab_broker,SCHB,buy,0.2573,50.4525,12.98,USD,1.0,12.98,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2023-06-29,schwab_broker,-,interest,0.0,0.0,0.6,USD,1.0,0.6,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 05/30-06/28
+2023-06-29,schwab_broker,-,fee,0.0,0.0,0.18,USD,1.0,0.18,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 05/30-06/28
+2023-07-01,iol_broker,-,interest,0.0,0.0,0.02,USD,1.0,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 20738684 | Cr&#233;dito | Inversion Argentina Dolares
+2023-07-01,iol_broker,-,interest,0.0,0.0,3132.31,ARS,0.00202,6.33,0.0,MovimientosHistoricos (1).xls,Mov ID: 20501534 | Cr&#233;dito | Inversion Argentina Pesos
+2023-07-03,iol_broker,SPY,buy,5.0,11247.0,56235.0,ARS,0.00202,113.59,394.67,OperacionesFinalizadas (3).xls,Boleto: 5613236 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2023-07-10,schwab_broker,SCHZ,fee,0.0,0.0,4.67,USD,1.0,4.67,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-07-10,schwab_broker,SCHZ,dividend,0.0,0.0,15.56,USD,1.0,15.56,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2023-07-11,schwab_broker,SCHZ,buy,0.2387,45.6223,10.89,USD,1.0,10.89,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2023-07-14,iol_broker,XBI,buy,4.0,85.0,340.0,USD,1.0,340.0,6.05,OperacionesFinalizadas (3).xls,Boleto: 20032 | Mercado: NYSE | SPDR S&amp;P Biotech ETF
+2023-07-28,schwab_broker,-,interest,0.0,0.0,0.58,USD,1.0,0.58,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 06/29-07/27
+2023-07-28,schwab_broker,-,fee,0.0,0.0,0.17,USD,1.0,0.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 06/29-07/27
+2023-07-31,schwab_broker,SPY,dividend,0.0,0.0,68.81,USD,1.0,68.81,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF
+2023-07-31,schwab_broker,SPY,fee,0.0,0.0,20.64,USD,1.0,20.64,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF
+2023-08-01,iol_broker,-,interest,0.0,0.0,0.02,USD,1.0,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 21851715 | Cr&#233;dito | Inversion Argentina Dolares
+2023-08-01,iol_broker,-,interest,0.0,0.0,424.72,ARS,0.001961,0.83,0.0,MovimientosHistoricos (1).xls,Mov ID: 21655268 | Cr&#233;dito | Inversion Argentina Pesos
+2023-08-04,iol_broker,SPY,fee,0.0,0.0,28.25,ARS,0.001961,0.06,28.25,MovimientosHistoricos (1).xls,Mov ID: 59307148 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-08-04,iol_broker,SPY,dividend,0.0,0.0,8.08,USD,1.0,8.08,0.0,MovimientosHistoricos (1).xls,Mov ID: 59307147 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2023-08-07,schwab_broker,SCHZ,fee,0.0,0.0,4.34,USD,1.0,4.34,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-08-07,schwab_broker,SCHZ,dividend,0.0,0.0,14.46,USD,1.0,14.46,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2023-08-08,iol_broker,SPY,dividend,0.0,0.0,24.37,USD,1.0,24.37,0.21,MovimientosHistoricos (1).xls,Mov ID: 59607729 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2023-08-08,schwab_broker,SCHZ,buy,0.2218,45.6286,10.12,USD,1.0,10.12,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2023-08-18,iol_broker,AAPL,fee,0.0,0.0,2.25,ARS,0.001961,0.0,2.25,MovimientosHistoricos (1).xls,Mov ID: 60603296 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-08-18,iol_broker,AAPL,dividend,0.0,0.0,0.51,USD,1.0,0.51,0.0,MovimientosHistoricos (1).xls,Mov ID: 60603295 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2023-08-30,schwab_broker,-,interest,0.0,0.0,0.66,USD,1.0,0.66,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 07/28-08/29
+2023-08-30,schwab_broker,-,fee,0.0,0.0,0.19,USD,1.0,0.19,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 07/28-08/29
+2023-09-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 23305938 | Cr&#233;dito | Inversion Argentina Dolares
+2023-09-01,iol_broker,-,interest,0.0,0.0,310.63,ARS,0.001961,0.61,0.0,MovimientosHistoricos (1).xls,Mov ID: 23235188 | Cr&#233;dito | Inversion Argentina Pesos
+2023-09-08,schwab_broker,SCHZ,fee,0.0,0.0,4.84,USD,1.0,4.84,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-09-08,schwab_broker,SCHZ,dividend,0.0,0.0,16.13,USD,1.0,16.13,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2023-09-11,schwab_broker,SCHZ,buy,0.2509,44.9892,11.29,USD,1.0,11.29,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2023-09-21,schwab_broker,XLE,fee,0.0,0.0,40.67,USD,1.0,40.67,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2023-09-21,schwab_broker,XLE,dividend,0.0,0.0,135.57,USD,1.0,135.57,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2023-09-22,iol_broker,XLE,fee,0.0,0.0,15.61,ARS,0.001136,0.02,15.61,MovimientosHistoricos (1).xls,Mov ID: 63243625 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-09-22,iol_broker,XLE,dividend,0.0,0.0,3.53,USD,1.0,3.53,0.0,MovimientosHistoricos (1).xls,Mov ID: 63243624 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2023-09-22,schwab_broker,XLE,buy,1.0539,90.0456,94.9,USD,1.0,94.9,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2023-09-25,schwab_broker,SCHB,dividend,0.0,0.0,19.07,USD,1.0,19.07,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2023-09-25,schwab_broker,SCHB,fee,0.0,0.0,5.72,USD,1.0,5.72,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2023-09-26,schwab_broker,SCHB,buy,0.2683,49.7593,13.35,USD,1.0,13.35,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2023-09-28,schwab_broker,-,interest,0.0,0.0,0.58,USD,1.0,0.58,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 08/30-09/27
+2023-09-28,schwab_broker,-,fee,0.0,0.0,0.17,USD,1.0,0.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 08/30-09/27
+2023-10-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 24755477 | Cr&#233;dito | Inversion Argentina Dolares
+2023-10-01,iol_broker,-,interest,0.0,0.0,311.58,ARS,0.001136,0.35,0.0,MovimientosHistoricos (1).xls,Mov ID: 24440031 | Cr&#233;dito | Inversion Argentina Pesos
+2023-10-06,schwab_broker,SCHZ,fee,0.0,0.0,5.05,USD,1.0,5.05,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-10-06,schwab_broker,SCHZ,dividend,0.0,0.0,16.83,USD,1.0,16.83,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2023-10-09,schwab_broker,SCHZ,buy,0.2683,43.9027,11.78,USD,1.0,11.78,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2023-10-30,schwab_broker,-,interest,0.0,0.0,0.64,USD,1.0,0.64,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 09/28-10/29
+2023-10-30,schwab_broker,-,fee,0.0,0.0,0.19,USD,1.0,0.19,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 09/28-10/29
+2023-10-31,schwab_broker,SPY,dividend,0.0,0.0,66.49,USD,1.0,66.49,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF
+2023-10-31,schwab_broker,SPY,fee,0.0,0.0,19.95,USD,1.0,19.95,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF
+2023-11-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 26587204 | Cr&#233;dito | Inversion Argentina Dolares
+2023-11-01,iol_broker,-,interest,0.0,0.0,332.76,ARS,0.001136,0.38,0.0,MovimientosHistoricos (1).xls,Mov ID: 26185501 | Cr&#233;dito | Inversion Argentina Pesos
+2023-11-02,iol_broker,SPY,dividend,0.0,0.0,23.55,USD,1.0,23.55,0.2,MovimientosHistoricos (1).xls,Mov ID: 66663991 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2023-11-07,schwab_broker,SCHZ,fee,0.0,0.0,4.79,USD,1.0,4.79,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-11-07,schwab_broker,SCHZ,dividend,0.0,0.0,15.98,USD,1.0,15.98,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2023-11-08,schwab_broker,SCHZ,buy,0.2524,44.34,11.19,USD,1.0,11.19,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2023-11-14,iol_broker,SPY,fee,0.0,0.0,35.73,ARS,0.001136,0.04,35.73,MovimientosHistoricos (1).xls,Mov ID: 67535737 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-11-14,iol_broker,SPY,dividend,0.0,0.0,8.08,USD,1.0,8.08,0.0,MovimientosHistoricos (1).xls,Mov ID: 67535736 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2023-11-22,iol_broker,AAPL,fee,0.0,0.0,2.3,ARS,0.001136,0.0,2.3,MovimientosHistoricos (1).xls,Mov ID: 68385764 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-11-22,iol_broker,AAPL,dividend,0.0,0.0,0.51,USD,1.0,0.51,0.0,MovimientosHistoricos (1).xls,Mov ID: 68385763 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2023-11-29,schwab_broker,-,fee,0.0,0.0,0.18,USD,1.0,0.18,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 10/30-11/28
+2023-11-29,schwab_broker,-,interest,0.0,0.0,0.6,USD,1.0,0.6,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 10/30-11/28
+2023-12-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 28332248 | Cr&#233;dito | Inversion Argentina Dolares
+2023-12-01,iol_broker,-,interest,0.0,0.0,333.67,ARS,0.00102,0.34,0.0,MovimientosHistoricos (1).xls,Mov ID: 27891911 | Cr&#233;dito | Inversion Argentina Pesos
+2023-12-07,schwab_broker,SCHZ,dividend,0.0,0.0,17.78,USD,1.0,17.78,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2023-12-07,schwab_broker,SCHZ,fee,0.0,0.0,5.33,USD,1.0,5.33,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-12-08,schwab_broker,SCHZ,buy,0.2731,45.58,12.45,USD,1.0,12.45,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2023-12-11,schwab_broker,SCHB,dividend,0.0,0.0,22.55,USD,1.0,22.55,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2023-12-11,schwab_broker,SCHF,fee,0.0,0.0,31.92,USD,1.0,31.92,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB INTERNATIONAL EQUITY ETF
+2023-12-11,schwab_broker,SCHF,dividend,0.0,0.0,106.4,USD,1.0,106.4,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB INTERNATIONAL EQUITY ETF
+2023-12-11,schwab_broker,SCHB,fee,0.0,0.0,6.77,USD,1.0,6.77,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2023-12-12,schwab_broker,SCHB,buy,0.2941,53.66,15.78,USD,1.0,15.78,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2023-12-12,schwab_broker,SCHF,buy,2.1081,35.33,74.48,USD,1.0,74.48,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB INTERNATIONAL EQUITY ETF
+2023-12-21,schwab_broker,SCHZ,dividend,0.0,0.0,16.21,USD,1.0,16.21,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2023-12-21,schwab_broker,XLE,fee,0.0,0.0,48.69,USD,1.0,48.69,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2023-12-21,schwab_broker,XLE,dividend,0.0,0.0,162.29,USD,1.0,162.29,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2023-12-21,schwab_broker,SCHZ,fee,0.0,0.0,4.86,USD,1.0,4.86,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2023-12-22,iol_broker,XBI,dividend,0.0,0.0,0.05,USD,1.0,0.05,0.0,MovimientosHistoricos (1).xls,Mov ID: 72005655 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2023-12-22,schwab_broker,SCHZ,buy,0.244,46.52,11.35,USD,1.0,11.35,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2023-12-22,schwab_broker,XLE,buy,1.3287,85.4961,113.6,USD,1.0,113.6,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2023-12-27,iol_broker,XLE,fee,0.0,0.0,42.14,ARS,0.00102,0.04,42.14,MovimientosHistoricos (1).xls,Mov ID: 72419130 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2023-12-27,iol_broker,XLE,dividend,0.0,0.0,4.21,USD,1.0,4.21,0.0,MovimientosHistoricos (1).xls,Mov ID: 72419129 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2023-12-28,schwab_broker,-,interest,0.0,0.0,0.58,USD,1.0,0.58,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 11/29-12/27
+2023-12-28,schwab_broker,-,fee,0.0,0.0,0.17,USD,1.0,0.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 11/29-12/27
+2024-01-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 30184062 | Cr&#233;dito | Inversion Argentina Dolares
+2024-01-01,iol_broker,-,interest,0.0,0.0,323.48,ARS,0.00102,0.33,0.0,MovimientosHistoricos (1).xls,Mov ID: 29677351 | Cr&#233;dito | Inversion Argentina Pesos
+2024-01-02,iol_broker,SPY,sell,15.0,23340.0,350100.0,ARS,0.00102,357.1,2457.01,OperacionesFinalizadas (3).xls,Boleto: 26946 | Mercado: BCBA | Cedear Spdr S&amp;P 500
+2024-01-05,iol_broker,-,withdrawal,0.0,0.0,350000.0,ARS,0.00102,357.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 30423097 | Extracci&#243;n de Fondos - Transferencia Electr&#243;nica - BANCO DE GALICIA Y BUENOS AIRES S.A. | Inversion Argentina Pesos
+2024-01-30,schwab_broker,-,interest,0.0,0.0,0.66,USD,1.0,0.66,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 12/28-01/29
+2024-01-30,schwab_broker,-,fee,0.0,0.0,0.19,USD,1.0,0.19,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 12/28-01/29
+2024-01-31,schwab_broker,SPY,fee,0.0,0.0,24.02,USD,1.0,24.02,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Pr Yr NRA Tax | SPDR S&P ...500 ETF
+2024-01-31,schwab_broker,SPY,dividend,0.0,0.0,80.06,USD,1.0,80.06,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Pr Yr Cash Div | SPDR S&P ...500 ETF
+2024-02-01,iol_broker,SPY,dividend,0.0,0.0,28.25,USD,1.0,28.25,0.24,MovimientosHistoricos (1).xls,Mov ID: 76934205 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2024-02-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 32052377 | Cr&#233;dito | Inversion Argentina Dolares
+2024-02-01,iol_broker,-,interest,0.0,0.0,564.06,ARS,0.000952,0.54,0.0,MovimientosHistoricos (1).xls,Mov ID: 31690666 | Cr&#233;dito | Inversion Argentina Pesos
+2024-02-05,iol_broker,SPY,fee,0.0,0.0,99.7,ARS,0.000952,0.09,99.7,MovimientosHistoricos (1).xls,Mov ID: 77296539 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-02-05,iol_broker,SPY,dividend,0.0,0.0,9.74,USD,1.0,9.74,0.0,MovimientosHistoricos (1).xls,Mov ID: 77296538 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2024-02-07,schwab_broker,SCHZ,dividend,0.0,0.0,18.59,USD,1.0,18.59,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-02-07,schwab_broker,SCHZ,fee,0.0,0.0,5.58,USD,1.0,5.58,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-02-08,schwab_broker,SCHZ,buy,0.2835,45.89,13.01,USD,1.0,13.01,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-02-27,iol_broker,AAPL,fee,0.0,0.0,5.31,ARS,0.000952,0.01,5.31,MovimientosHistoricos (1).xls,Mov ID: 79448244 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-02-27,iol_broker,AAPL,dividend,0.0,0.0,0.51,USD,1.0,0.51,0.0,MovimientosHistoricos (1).xls,Mov ID: 79448243 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2024-02-28,schwab_broker,-,fee,0.0,0.0,0.17,USD,1.0,0.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 01/30-02/27
+2024-02-28,schwab_broker,-,interest,0.0,0.0,0.58,USD,1.0,0.58,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 01/30-02/27
+2024-03-01,iol_broker,-,interest,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 33787415 | Cr&#233;dito | Inversion Argentina Dolares
+2024-03-01,iol_broker,-,interest,0.0,0.0,220.94,ARS,0.000952,0.21,0.0,MovimientosHistoricos (1).xls,Mov ID: 33694373 | Cr&#233;dito | Inversion Argentina Pesos
+2024-03-07,schwab_broker,SCHZ,dividend,0.0,0.0,17.04,USD,1.0,17.04,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-03-07,schwab_broker,SCHZ,fee,0.0,0.0,5.11,USD,1.0,5.11,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-03-08,schwab_broker,SCHZ,buy,0.2584,46.16,11.93,USD,1.0,11.93,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-03-21,schwab_broker,XLE,fee,0.0,0.0,44.84,USD,1.0,44.84,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2024-03-21,schwab_broker,XLE,dividend,0.0,0.0,149.46,USD,1.0,149.46,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2024-03-21,schwab_broker,XLE,buy,1.129,92.67,104.62,USD,1.0,104.62,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2024-03-25,schwab_broker,SCHB,fee,0.0,0.0,5.65,USD,1.0,5.65,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2024-03-25,schwab_broker,SCHB,dividend,0.0,0.0,18.82,USD,1.0,18.82,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2024-03-26,schwab_broker,SCHB,buy,0.2169,60.72,13.17,USD,1.0,13.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2024-03-27,schwab_broker,-,fee,0.0,0.0,0.16,USD,1.0,0.16,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 02/28-03/26
+2024-03-27,schwab_broker,-,interest,0.0,0.0,0.56,USD,1.0,0.56,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 02/28-03/26
+2024-04-01,iol_broker,-,interest,0.0,0.0,0.04,USD,1.0,0.04,0.0,MovimientosHistoricos (1).xls,Mov ID: 35584499 | Cr&#233;dito | Inversion Argentina Dolares
+2024-04-01,iol_broker,-,interest,0.0,0.0,197.55,ARS,0.000926,0.18,0.0,MovimientosHistoricos (1).xls,Mov ID: 35383434 | Cr&#233;dito | Inversion Argentina Pesos
+2024-04-02,iol_broker,XLE,fee,0.0,0.0,40.81,ARS,0.000926,0.04,40.81,MovimientosHistoricos (1).xls,Mov ID: 82729296 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-04-02,iol_broker,XLE,dividend,0.0,0.0,3.85,USD,1.0,3.85,0.0,MovimientosHistoricos (1).xls,Mov ID: 82729295 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2024-04-05,schwab_broker,SCHZ,fee,0.0,0.0,5.36,USD,1.0,5.36,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-04-05,schwab_broker,SCHZ,dividend,0.0,0.0,17.88,USD,1.0,17.88,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-04-08,schwab_broker,SCHZ,buy,0.2759,45.38,12.52,USD,1.0,12.52,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-04-29,schwab_broker,-,interest,0.0,0.0,0.66,USD,1.0,0.66,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 03/27-04/28
+2024-04-29,schwab_broker,-,fee,0.0,0.0,0.19,USD,1.0,0.19,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 03/27-04/28
+2024-04-30,schwab_broker,SPY,dividend,0.0,0.0,66.99,USD,1.0,66.99,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF
+2024-04-30,schwab_broker,SPY,fee,0.0,0.0,20.1,USD,1.0,20.1,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF
+2024-05-01,iol_broker,-,interest,0.0,0.0,0.15,USD,1.0,0.15,0.0,MovimientosHistoricos (1).xls,Mov ID: 37290049 | Cr&#233;dito | Inversion Argentina Dolares
+2024-05-01,iol_broker,-,interest,0.0,0.0,139.48,ARS,0.000926,0.13,0.0,MovimientosHistoricos (1).xls,Mov ID: 36997699 | Cr&#233;dito | Inversion Argentina Pesos
+2024-05-02,iol_broker,SPY,fee,0.0,0.0,113.32,ARS,0.000926,0.1,113.32,MovimientosHistoricos (1).xls,Mov ID: 86020769 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-05-02,iol_broker,SPY,dividend,0.0,0.0,7.31,USD,1.0,7.31,0.0,MovimientosHistoricos (1).xls,Mov ID: 86020768 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2024-05-07,schwab_broker,SCHZ,buy,0.2677,45.32,12.13,USD,1.0,12.13,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-05-07,schwab_broker,SCHZ,fee,0.0,0.0,5.2,USD,1.0,5.2,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-05-07,schwab_broker,SCHZ,dividend,0.0,0.0,17.33,USD,1.0,17.33,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-05-17,iol_broker,AAPL,fee,0.0,0.0,0.61,ARS,0.000769,0.0,0.61,MovimientosHistoricos (1).xls,Mov ID: 87904995 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-05-17,iol_broker,AAPL,dividend,0.0,0.0,0.53,USD,1.0,0.53,0.0,MovimientosHistoricos (1).xls,Mov ID: 87904994 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2024-05-30,schwab_broker,-,interest,0.0,0.0,0.62,USD,1.0,0.62,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 04/29-05/29
+2024-05-30,schwab_broker,-,fee,0.0,0.0,0.18,USD,1.0,0.18,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 04/29-05/29
+2024-06-01,iol_broker,-,interest,0.0,0.0,0.17,USD,1.0,0.17,0.0,MovimientosHistoricos (1).xls,Mov ID: 39250391 | Cr&#233;dito | Inversion Argentina Dolares
+2024-06-01,iol_broker,-,interest,0.0,0.0,35.61,ARS,0.000769,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 38586851 | Cr&#233;dito | Inversion Argentina Pesos
+2024-06-07,schwab_broker,SCHZ,fee,0.0,0.0,5.97,USD,1.0,5.97,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-06-07,schwab_broker,SCHZ,dividend,0.0,0.0,19.89,USD,1.0,19.89,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-06-07,schwab_broker,SCHZ,buy,0.3067,45.38,13.92,USD,1.0,13.92,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-06-10,schwab_broker,-,deposit,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N | Original Date: 06/11/2024 as of 06/10/2024"
+2024-06-11,schwab_broker,-,withdrawal,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Adj | Tfr BANK OF AMERICA, N | Original Date: 06/13/2024 as of 06/11/2024"
+2024-06-13,schwab_broker,SCHB,buy,100.0,62.85,6285.0,USD,1.0,6285.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2024-06-20,schwab_broker,SCHB,sell,73.0,63.3174,4597.03,USD,1.0,4597.03,25.14,Individual_XXX938_Transactions_20260916-111746.csv,Action: Sell | SCHWAB US BROAD MARKET ETF
+2024-06-20,schwab_broker,-,deposit,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N | Original Date: 06/21/2024 as of 06/20/2024"
+2024-06-21,schwab_broker,-,withdrawal,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Adj | Tfr BANK OF AMERICA, N | Original Date: 06/25/2024 as of 06/21/2024"
+2024-06-26,schwab_broker,XLE,fee,0.0,0.0,43.91,USD,1.0,43.91,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2024-06-26,schwab_broker,XLE,dividend,0.0,0.0,146.38,USD,1.0,146.38,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2024-06-26,schwab_broker,XLE,buy,1.13,90.6799,102.47,USD,1.0,102.47,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2024-06-27,iol_broker,XBI,dividend,0.0,0.0,0.46,USD,1.0,0.46,0.0,MovimientosHistoricos (1).xls,Mov ID: 92530070 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2024-06-27,iol_broker,XLE,fee,0.0,0.0,42.18,ARS,0.000769,0.03,42.18,MovimientosHistoricos (1).xls,Mov ID: 92457294 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-06-27,iol_broker,XLE,dividend,0.0,0.0,3.75,USD,1.0,3.75,0.0,MovimientosHistoricos (1).xls,Mov ID: 92457293 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2024-06-27,schwab_broker,-,fee,0.0,0.0,0.16,USD,1.0,0.16,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 05/30-06/26
+2024-06-27,schwab_broker,-,interest,0.0,0.0,0.54,USD,1.0,0.54,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 05/30-06/26
+2024-06-28,iol_broker,SPY,dividend,0.0,0.0,23.71,USD,1.0,23.71,0.21,MovimientosHistoricos (1).xls,Mov ID: 92601612 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2024-06-28,schwab_broker,-,fee,0.0,0.0,0.07,USD,1.0,0.07,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | TAX WITHHELD S1INT ADJ | Original Date: 07/01/2024 as of 06/28/2024
+2024-06-28,schwab_broker,-,interest,0.0,0.0,0.24,USD,1.0,0.24,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Interest Adj | 06/21-06/26 ADJ S1 INT | Original Date: 07/01/2024 as of 06/28/2024
+2024-07-01,iol_broker,-,interest,0.0,0.0,0.17,USD,1.0,0.17,0.0,MovimientosHistoricos (1).xls,Mov ID: 41111998 | Cr&#233;dito | Inversion Argentina Dolares
+2024-07-01,iol_broker,-,interest,0.0,0.0,20.61,ARS,0.000769,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 40520844 | Cr&#233;dito | Inversion Argentina Pesos
+2024-07-01,schwab_broker,SCHF,buy,1.0096,38.52,38.89,USD,1.0,38.89,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB INTERNATIONAL EQUITY ETF
+2024-07-01,schwab_broker,SCHB,buy,0.2899,62.84,18.22,USD,1.0,18.22,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2024-07-01,schwab_broker,SCHF,fee,0.0,0.0,16.67,USD,1.0,16.67,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB INTERNATIONAL EQUITY ETF
+2024-07-01,schwab_broker,SCHB,dividend,0.0,0.0,26.03,USD,1.0,26.03,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2024-07-01,schwab_broker,SCHB,fee,0.0,0.0,7.81,USD,1.0,7.81,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2024-07-01,schwab_broker,SCHF,dividend,0.0,0.0,55.56,USD,1.0,55.56,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB INTERNATIONAL EQUITY ETF
+2024-07-02,iol_broker,GOOGL,fee,0.0,0.0,20.98,ARS,0.000769,0.02,20.98,MovimientosHistoricos (1).xls,Mov ID: 93025126 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-07-02,iol_broker,GOOGL,dividend,0.0,0.0,1.86,USD,1.0,1.86,0.0,MovimientosHistoricos (1).xls,Mov ID: 93025125 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2024-07-08,schwab_broker,SCHZ,fee,0.0,0.0,5.07,USD,1.0,5.07,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-07-08,schwab_broker,SCHZ,dividend,0.0,0.0,16.91,USD,1.0,16.91,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-07-08,schwab_broker,SCHZ,buy,0.2586,45.79,11.84,USD,1.0,11.84,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-07-31,schwab_broker,SPY,dividend,0.0,0.0,73.88,USD,1.0,73.88,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF
+2024-07-31,schwab_broker,SPY,fee,0.0,0.0,22.16,USD,1.0,22.16,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF
+2024-08-01,iol_broker,SPY,dividend,0.0,0.0,26.16,USD,1.0,26.16,0.22,MovimientosHistoricos (1).xls,Mov ID: 97572863 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2024-08-01,iol_broker,-,interest,0.0,0.0,0.18,USD,1.0,0.18,0.0,MovimientosHistoricos (1).xls,Mov ID: 43750534 | Cr&#233;dito | Inversion Argentina Dolares
+2024-08-01,iol_broker,-,interest,0.0,0.0,21.21,ARS,0.000758,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 42839802 | Cr&#233;dito | Inversion Argentina Pesos
+2024-08-03,iol_broker,SPY,fee,0.0,0.0,92.99,ARS,0.000758,0.07,92.99,MovimientosHistoricos (1).xls,Mov ID: 97755512 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-08-03,iol_broker,SPY,dividend,0.0,0.0,8.06,USD,1.0,8.06,0.0,MovimientosHistoricos (1).xls,Mov ID: 97755511 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2024-08-07,schwab_broker,SCHZ,buy,0.2778,46.72,12.98,USD,1.0,12.98,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-08-07,schwab_broker,SCHZ,fee,0.0,0.0,5.57,USD,1.0,5.57,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-08-07,schwab_broker,SCHZ,dividend,0.0,0.0,18.55,USD,1.0,18.55,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-08-14,iol_broker,XLE,sell,6.0,56500.0,339000.0,ARS,0.000758,256.96,2379.1,OperacionesFinalizadas (3).xls,Boleto: 17626029 | Mercado: BCBA | Cedear Energy Select Sector Sp
+2024-08-14,iol_broker,-,withdrawal,0.0,0.0,344871.0,ARS,0.000758,261.41,0.0,MovimientosHistoricos (1).xls,Mov ID: 44414131 | Extracci&#243;n de Fondos - Transferencia Electr&#243;nica - BANCO DE GALICIA Y BUENOS AIRES S.A. | Inversion Argentina Pesos
+2024-08-17,iol_broker,AAPL,fee,0.0,0.0,6.17,ARS,0.000758,0.0,6.17,MovimientosHistoricos (1).xls,Mov ID: 99559039 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-08-17,iol_broker,AAPL,dividend,0.0,0.0,0.53,USD,1.0,0.53,0.0,MovimientosHistoricos (1).xls,Mov ID: 99559038 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2024-08-23,schwab_broker,SCHB,buy,152.0,65.125,9899.0,USD,1.0,9899.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2024-08-23,schwab_broker,-,deposit,0.0,0.0,10000.0,USD,1.0,10000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr CITIBANK NA, NOT AVAILABLE | Original Date: 08/26/2024 as of 08/23/2024"
+2024-08-29,schwab_broker,-,deposit,0.0,0.0,12000.0,USD,1.0,12000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr Citibank NA, NOT AVAILABLE | Original Date: 08/30/2024 as of 08/29/2024"
+2024-08-30,schwab_broker,SCHF,buy,145.0,40.79,5914.55,USD,1.0,5914.55,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB INTERNATIONAL EQUITY ETF
+2024-08-30,schwab_broker,SCHB,buy,95.0,65.03,6177.85,USD,1.0,6177.85,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2024-09-01,iol_broker,-,interest,0.0,0.0,0.2,USD,1.0,0.2,0.0,MovimientosHistoricos (1).xls,Mov ID: 46125800 | Cr&#233;dito | Inversion Argentina Dolares
+2024-09-01,iol_broker,-,interest,0.0,0.0,8.85,ARS,0.000758,0.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 45811218 | Cr&#233;dito | Inversion Argentina Pesos
+2024-09-09,schwab_broker,SCHZ,fee,0.0,0.0,5.96,USD,1.0,5.96,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-09-09,schwab_broker,SCHZ,dividend,0.0,0.0,19.88,USD,1.0,19.88,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-09-09,schwab_broker,SCHZ,buy,0.2931,47.5,13.92,USD,1.0,13.92,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-09-17,iol_broker,GOOGL,fee,0.0,0.0,22.46,ARS,0.000758,0.02,22.46,MovimientosHistoricos (1).xls,Mov ID: 103151632 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-09-17,iol_broker,GOOGL,dividend,0.0,0.0,1.89,USD,1.0,1.89,0.0,MovimientosHistoricos (1).xls,Mov ID: 103151631 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2024-09-25,schwab_broker,XLE,buy,1.1896,88.14,104.85,USD,1.0,104.85,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2024-09-25,schwab_broker,XLE,fee,0.0,0.0,44.94,USD,1.0,44.94,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2024-09-25,schwab_broker,XLE,dividend,0.0,0.0,149.79,USD,1.0,149.79,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2024-09-26,iol_broker,XLE,fee,0.0,0.0,9.09,ARS,0.000758,0.01,9.09,MovimientosHistoricos (1).xls,Mov ID: 103999344 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-09-26,iol_broker,XLE,dividend,0.0,0.0,2.29,USD,1.0,2.29,0.0,MovimientosHistoricos (1).xls,Mov ID: 103999343 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2024-09-26,iol_broker,XBI,dividend,0.0,0.0,0.06,USD,1.0,0.06,0.0,MovimientosHistoricos (1).xls,Mov ID: 103997090 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2024-09-27,schwab_broker,-,interest,0.0,0.0,0.6,USD,1.0,0.6,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 08/29-09/26
+2024-09-27,schwab_broker,-,fee,0.0,0.0,0.18,USD,1.0,0.18,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 08/29-09/26
+2024-09-30,schwab_broker,SCHB,fee,0.0,0.0,23.25,USD,1.0,23.25,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2024-09-30,schwab_broker,SCHB,dividend,0.0,0.0,77.5,USD,1.0,77.5,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2024-09-30,schwab_broker,SCHB,buy,0.8201,66.15,54.25,USD,1.0,54.25,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2024-10-01,iol_broker,-,interest,0.0,0.0,0.19,USD,1.0,0.19,0.0,MovimientosHistoricos (1).xls,Mov ID: 48357487 | Cr&#233;dito | Inversion Argentina Dolares
+2024-10-07,schwab_broker,SCHZ,fee,0.0,0.0,5.2,USD,1.0,5.2,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-10-07,schwab_broker,SCHZ,dividend,0.0,0.0,17.34,USD,1.0,17.34,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-10-07,schwab_broker,SCHZ,buy,0.2595,46.78,12.14,USD,1.0,12.14,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-10-10,schwab_broker,SCHB,stock_split,752.0,22.2333,0.0,USD,1.0,0.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Stock Split | SCHWAB US BROAD MARKET ETF | Original Date: 10/11/2024 as of 10/10/2024
+2024-10-10,schwab_broker,SCHF,stock_split,299.0,20.17,0.0,USD,1.0,0.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Stock Split | SCHWAB INTERNATIONAL EQUITY ETF | Original Date: 10/11/2024 as of 10/10/2024
+2024-10-10,schwab_broker,SCHZ,stock_split,124.0,23.34,0.0,USD,1.0,0.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Stock Split | SCHWAB US AGGREGATE BONDETF | Original Date: 10/11/2024 as of 10/10/2024
+2024-10-10,schwab_broker,SCHF,dividend,0.0,0.0,5.9,USD,1.0,5.9,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash In Lieu | SCHWAB INTERNATIONAL EQUITY ETF | Original Date: 10/14/2024 as of 10/10/2024
+2024-10-10,schwab_broker,SCHZ,dividend,0.0,0.0,5.36,USD,1.0,5.36,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash In Lieu | SCHWAB US AGGREGATE BONDETF | Original Date: 10/14/2024 as of 10/10/2024
+2024-10-10,schwab_broker,SCHB,dividend,0.0,0.0,6.6,USD,1.0,6.6,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash In Lieu | SCHWAB US BROAD MARKET ETF | Original Date: 10/14/2024 as of 10/10/2024
+2024-10-31,schwab_broker,SPY,dividend,0.0,0.0,73.31,USD,1.0,73.31,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF @
+2024-10-31,schwab_broker,SPY,fee,0.0,0.0,21.99,USD,1.0,21.99,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF @
+2024-11-01,iol_broker,-,interest,0.0,0.0,0.2,USD,1.0,0.2,0.0,MovimientosHistoricos (1).xls,Mov ID: 50358758 | Cr&#233;dito | Inversion Argentina Dolares
+2024-11-04,iol_broker,SPY,fee,0.0,0.0,98.06,ARS,0.000847,0.08,98.06,MovimientosHistoricos (1).xls,Mov ID: 108016397 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-11-04,iol_broker,SPY,dividend,0.0,0.0,8.0,USD,1.0,8.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 108016396 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2024-11-06,iol_broker,SPY,dividend,0.0,0.0,25.96,USD,1.0,25.96,0.22,MovimientosHistoricos (1).xls,Mov ID: 108449962 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2024-11-07,schwab_broker,SCHZ,dividend,0.0,0.0,20.03,USD,1.0,20.03,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-11-07,schwab_broker,-,deposit,0.0,0.0,12000.0,USD,1.0,12000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N | Original Date: 11/08/2024 as of 11/07/2024"
+2024-11-07,schwab_broker,SCHZ,fee,0.0,0.0,6.01,USD,1.0,6.01,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-11-07,schwab_broker,SCHZ,buy,0.6098,22.99,14.02,USD,1.0,14.02,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-11-08,schwab_broker,-,withdrawal,0.0,0.0,12000.0,USD,1.0,12000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Adj | Tfr BANK OF AMERICA, N | Original Date: 11/13/2024 as of 11/08/2024"
+2024-11-08,schwab_broker,SCHF,buy,302.0,19.63,5928.26,USD,1.0,5928.26,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB INTERNATIONAL EQUITY ETF
+2024-11-08,schwab_broker,SCHB,buy,260.0,23.15,6019.0,USD,1.0,6019.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2024-11-19,iol_broker,AAPL,fee,0.0,0.0,6.55,ARS,0.000847,0.01,6.55,MovimientosHistoricos (1).xls,Mov ID: 109980950 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-11-19,iol_broker,AAPL,dividend,0.0,0.0,0.53,USD,1.0,0.53,0.0,MovimientosHistoricos (1).xls,Mov ID: 109980949 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2024-12-01,iol_broker,-,interest,0.0,0.0,0.19,USD,1.0,0.19,0.0,MovimientosHistoricos (1).xls,Mov ID: 51783180 | Cr&#233;dito | Inversion Argentina Dolares
+2024-12-06,schwab_broker,SCHZ,fee,0.0,0.0,5.42,USD,1.0,5.42,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-12-06,schwab_broker,SCHZ,dividend,0.0,0.0,18.07,USD,1.0,18.07,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-12-06,schwab_broker,SCHZ,buy,0.5434,23.28,12.65,USD,1.0,12.65,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-12-16,schwab_broker,SCHB,fee,0.0,0.0,34.57,USD,1.0,34.57,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2024-12-16,schwab_broker,SCHB,dividend,0.0,0.0,115.22,USD,1.0,115.22,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2024-12-16,schwab_broker,SCHB,buy,3.4319,23.5,80.65,USD,1.0,80.65,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2024-12-18,schwab_broker,SCHF,dividend,0.0,0.0,379.65,USD,1.0,379.65,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB INTERNATIONAL EQUITY ETF
+2024-12-18,schwab_broker,SCHF,buy,14.0237,18.95,265.75,USD,1.0,265.75,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB INTERNATIONAL EQUITY ETF
+2024-12-18,schwab_broker,SCHF,fee,0.0,0.0,113.9,USD,1.0,113.9,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB INTERNATIONAL EQUITY ETF
+2024-12-19,iol_broker,GOOGL,fee,0.0,0.0,23.84,ARS,0.000847,0.02,23.84,MovimientosHistoricos (1).xls,Mov ID: 114046358 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-12-19,iol_broker,GOOGL,dividend,0.0,0.0,1.89,USD,1.0,1.89,0.0,MovimientosHistoricos (1).xls,Mov ID: 114046357 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2024-12-26,schwab_broker,XLE,fee,0.0,0.0,43.49,USD,1.0,43.49,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2024-12-26,schwab_broker,XLE,dividend,0.0,0.0,144.96,USD,1.0,144.96,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2024-12-26,schwab_broker,XLE,buy,1.1996,84.5897,101.47,USD,1.0,101.47,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2024-12-27,iol_broker,XLE,fee,0.0,0.0,27.96,ARS,0.000847,0.02,27.96,MovimientosHistoricos (1).xls,Mov ID: 114904318 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2024-12-27,iol_broker,XLE,dividend,0.0,0.0,2.2,USD,1.0,2.2,0.0,MovimientosHistoricos (1).xls,Mov ID: 114904317 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2024-12-27,schwab_broker,SCHZ,buy,0.6229,22.7,14.14,USD,1.0,14.14,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2024-12-27,schwab_broker,SCHZ,fee,0.0,0.0,6.06,USD,1.0,6.06,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2024-12-27,schwab_broker,SCHZ,dividend,0.0,0.0,20.2,USD,1.0,20.2,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2024-12-30,iol_broker,XBI,dividend,0.0,0.0,0.02,USD,1.0,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 115042114 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2025-01-01,iol_broker,-,interest,0.0,0.0,0.22,USD,1.0,0.22,0.0,MovimientosHistoricos (1).xls,Mov ID: 53154720 | Cr&#233;dito | Inversion Argentina Dolares
+2025-01-31,schwab_broker,SPY,fee,0.0,0.0,24.77,USD,1.0,24.77,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Pr Yr NRA Tax | SPDR S&P ...500 ETF IV
+2025-01-31,schwab_broker,SPY,dividend,0.0,0.0,82.55,USD,1.0,82.55,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Pr Yr Cash Div | SPDR S&P ...500 ETF IV
+2025-02-01,iol_broker,-,interest,0.0,0.0,0.23,USD,1.0,0.23,0.0,MovimientosHistoricos (1).xls,Mov ID: 54632662 | Cr&#233;dito | Inversion Argentina Dolares
+2025-02-03,iol_broker,SPY,dividend,0.0,0.0,29.24,USD,1.0,29.24,0.25,MovimientosHistoricos (1).xls,Mov ID: 119704018 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2025-02-03,iol_broker,SPY,fee,0.0,0.0,117.12,ARS,0.000833,0.1,117.12,MovimientosHistoricos (1).xls,Mov ID: 119556869 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-02-03,iol_broker,SPY,dividend,0.0,0.0,9.01,USD,1.0,9.01,0.0,MovimientosHistoricos (1).xls,Mov ID: 119556868 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2025-02-07,schwab_broker,SCHZ,fee,0.0,0.0,6.51,USD,1.0,6.51,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-02-07,schwab_broker,SCHZ,dividend,0.0,0.0,21.7,USD,1.0,21.7,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-02-07,schwab_broker,SCHZ,buy,0.6654,22.83,15.19,USD,1.0,15.19,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-02-14,iol_broker,AAPL,dividend,0.0,0.0,0.53,USD,1.0,0.53,0.0,MovimientosHistoricos (1).xls,Mov ID: 121109402 | Pago de Dividendos(AAPL US$) | Inversion Argentina Dolares
+2025-02-14,iol_broker,AAPL,fee,0.0,0.0,6.91,ARS,0.000833,0.01,6.91,MovimientosHistoricos (1).xls,Mov ID: 121109403 | Pago de Dividendos(AAPL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-03-01,iol_broker,-,interest,0.0,0.0,0.22,USD,1.0,0.22,0.0,MovimientosHistoricos (1).xls,Mov ID: 55855882 | Cr&#233;dito | Inversion Argentina Dolares
+2025-03-07,iol_broker,AAPL,sell,66.0,14500.0,957000.0,ARS,0.00082,784.74,6716.23,OperacionesFinalizadas (3).xls,Boleto: 5267816 | Mercado: BCBA | Cedear Apple Inc.
+2025-03-07,schwab_broker,SCHZ,fee,0.0,0.0,5.7,USD,1.0,5.7,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-03-07,schwab_broker,SCHZ,dividend,0.0,0.0,19.0,USD,1.0,19.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-03-07,schwab_broker,SCHZ,buy,0.5758,23.1,13.3,USD,1.0,13.3,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-03-12,schwab_broker,-,deposit,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N | Original Date: 03/13/2025 as of 03/12/2025"
+2025-03-13,schwab_broker,-,withdrawal,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Adj | Tfr BANK OF AMERICA, N | Original Date: 03/17/2025 as of 03/13/2025"
+2025-03-14,schwab_broker,SCHB,buy,150.0,21.65,3247.5,USD,1.0,3247.5,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2025-03-14,schwab_broker,-,deposit,0.0,0.0,10000.0,USD,1.0,10000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr Bank of America, N | Original Date: 03/17/2025 as of 03/14/2025"
+2025-03-17,schwab_broker,-,withdrawal,0.0,0.0,10000.0,USD,1.0,10000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Adj | Tfr BANK OF AMERICA, N | Original Date: 03/19/2025 as of 03/17/2025"
+2025-03-18,iol_broker,GOOGL,fee,0.0,0.0,14.93,ARS,0.00082,0.01,14.93,MovimientosHistoricos (1).xls,Mov ID: 124543199 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-03-18,iol_broker,GOOGL,dividend,0.0,0.0,1.89,USD,1.0,1.89,0.0,MovimientosHistoricos (1).xls,Mov ID: 124543198 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2025-03-26,schwab_broker,XLE,fee,0.0,0.0,44.76,USD,1.0,44.76,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2025-03-26,schwab_broker,XLE,dividend,0.0,0.0,149.21,USD,1.0,149.21,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2025-03-26,schwab_broker,XLE,buy,1.1048,94.5395,104.45,USD,1.0,104.45,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2025-03-27,iol_broker,XBI,dividend,0.0,0.0,0.02,USD,1.0,0.02,0.0,MovimientosHistoricos (1).xls,Mov ID: 125429127 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2025-03-27,iol_broker,XLE,fee,0.0,0.0,17.84,ARS,0.00082,0.01,17.84,MovimientosHistoricos (1).xls,Mov ID: 125389626 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-03-27,iol_broker,XLE,dividend,0.0,0.0,2.25,USD,1.0,2.25,0.0,MovimientosHistoricos (1).xls,Mov ID: 125389625 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2025-03-31,schwab_broker,SCHB,fee,0.0,0.0,30.02,USD,1.0,30.02,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2025-03-31,schwab_broker,SCHB,dividend,0.0,0.0,100.05,USD,1.0,100.05,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2025-03-31,schwab_broker,SCHB,buy,3.3064,21.18,70.03,USD,1.0,70.03,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2025-04-01,iol_broker,-,interest,0.0,0.0,0.25,USD,1.0,0.25,0.0,MovimientosHistoricos (1).xls,Mov ID: 56872630 | Cr&#233;dito | Inversion Argentina Dolares
+2025-04-07,schwab_broker,SCHZ,buy,0.5629,23.15,13.03,USD,1.0,13.03,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-04-07,schwab_broker,SCHZ,dividend,0.0,0.0,18.62,USD,1.0,18.62,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-04-07,schwab_broker,SCHZ,fee,0.0,0.0,5.59,USD,1.0,5.59,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-04-30,iol_broker,-,withdrawal,0.0,0.0,500000.0,ARS,0.00082,410.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 57969530 | Extracci&#243;n de Fondos - Transferencia Electr&#243;nica - BANCO DE GALICIA Y BUENOS AIRES S.A. | Inversion Argentina Pesos
+2025-04-30,schwab_broker,SPY,dividend,0.0,0.0,71.21,USD,1.0,71.21,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF
+2025-04-30,schwab_broker,SPY,fee,0.0,0.0,21.36,USD,1.0,21.36,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF
+2025-05-01,iol_broker,-,interest,0.0,0.0,0.25,USD,1.0,0.25,0.0,MovimientosHistoricos (1).xls,Mov ID: 58056316 | Cr&#233;dito | Inversion Argentina Dolares
+2025-05-05,iol_broker,SPY,fee,0.0,0.0,67.13,ARS,0.00082,0.06,67.13,MovimientosHistoricos (1).xls,Mov ID: 128987466 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-05-05,iol_broker,SPY,dividend,0.0,0.0,7.77,USD,1.0,7.77,0.0,MovimientosHistoricos (1).xls,Mov ID: 128987465 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2025-05-07,schwab_broker,SCHZ,buy,0.6019,23.01,13.85,USD,1.0,13.85,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-05-07,schwab_broker,SCHZ,fee,0.0,0.0,5.94,USD,1.0,5.94,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-05-07,schwab_broker,SCHZ,dividend,0.0,0.0,19.79,USD,1.0,19.79,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-05-19,iol_broker,SPY,dividend,0.0,0.0,25.21,USD,1.0,25.21,0.22,MovimientosHistoricos (1).xls,Mov ID: 130765589 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2025-05-21,schwab_broker,SCHB,sell,660.0,22.8107,15029.92,USD,1.0,15029.92,25.11,Individual_XXX938_Transactions_20260916-111746.csv,Action: Sell | SCHWAB US BROAD MARKET ETF
+2025-06-01,iol_broker,-,interest,0.0,0.0,0.27,USD,1.0,0.27,0.0,MovimientosHistoricos (1).xls,Mov ID: 58940722 | Cr&#233;dito | Inversion Argentina Dolares
+2025-06-06,schwab_broker,SCHZ,fee,0.0,0.0,6.24,USD,1.0,6.24,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-06-06,schwab_broker,SCHZ,dividend,0.0,0.0,20.8,USD,1.0,20.8,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-06-06,schwab_broker,SCHZ,buy,0.6383,22.81,14.56,USD,1.0,14.56,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-06-18,iol_broker,GOOGL,fee,0.0,0.0,16.67,ARS,0.000781,0.01,16.67,MovimientosHistoricos (1).xls,Mov ID: 133512316 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-06-18,iol_broker,GOOGL,dividend,0.0,0.0,1.98,USD,1.0,1.98,0.0,MovimientosHistoricos (1).xls,Mov ID: 133512315 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2025-06-25,schwab_broker,XLE,fee,0.0,0.0,45.12,USD,1.0,45.12,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2025-06-25,schwab_broker,XLE,buy,1.2417,84.79,105.28,USD,1.0,105.28,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2025-06-25,schwab_broker,XLE,dividend,0.0,0.0,150.4,USD,1.0,150.4,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2025-06-26,iol_broker,XBI,dividend,0.0,0.0,0.03,USD,1.0,0.03,0.0,MovimientosHistoricos (1).xls,Mov ID: 134336435 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2025-06-26,iol_broker,XLE,fee,0.0,0.0,19.77,ARS,0.000781,0.02,19.77,MovimientosHistoricos (1).xls,Mov ID: 134317239 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-06-26,iol_broker,XLE,dividend,0.0,0.0,2.26,USD,1.0,2.26,0.0,MovimientosHistoricos (1).xls,Mov ID: 134317238 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2025-06-30,schwab_broker,SCHF,buy,4.1701,22.04,91.91,USD,1.0,91.91,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB INTERNATIONAL EQUITY ETF
+2025-06-30,schwab_broker,SCHF,fee,0.0,0.0,39.39,USD,1.0,39.39,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB INTERNATIONAL EQUITY ETF
+2025-06-30,schwab_broker,SCHF,dividend,0.0,0.0,131.3,USD,1.0,131.3,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB INTERNATIONAL EQUITY ETF
+2025-06-30,schwab_broker,SCHB,fee,0.0,0.0,18.66,USD,1.0,18.66,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2025-06-30,schwab_broker,SCHB,dividend,0.0,0.0,62.21,USD,1.0,62.21,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2025-06-30,schwab_broker,SCHB,buy,1.8329,23.76,43.55,USD,1.0,43.55,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2025-07-01,iol_broker,-,interest,0.0,0.0,0.26,USD,1.0,0.26,0.0,MovimientosHistoricos (1).xls,Mov ID: 59765409 | Cr&#233;dito | Inversion Argentina Dolares
+2025-07-08,schwab_broker,SCHZ,buy,0.5891,22.95,13.52,USD,1.0,13.52,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-07-08,schwab_broker,SCHZ,fee,0.0,0.0,5.79,USD,1.0,5.79,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-07-08,schwab_broker,SCHZ,dividend,0.0,0.0,19.31,USD,1.0,19.31,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-07-31,schwab_broker,SPY,dividend,0.0,0.0,73.97,USD,1.0,73.97,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF
+2025-07-31,schwab_broker,SPY,fee,0.0,0.0,22.19,USD,1.0,22.19,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF
+2025-08-01,iol_broker,SPY,fee,0.0,0.0,80.85,ARS,0.000781,0.06,80.85,MovimientosHistoricos (1).xls,Mov ID: 138780112 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-08-01,iol_broker,SPY,dividend,0.0,0.0,8.07,USD,1.0,8.07,0.0,MovimientosHistoricos (1).xls,Mov ID: 138780111 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2025-08-01,iol_broker,SPY,dividend,0.0,0.0,26.2,USD,1.0,26.2,0.22,MovimientosHistoricos (1).xls,Mov ID: 138592705 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2025-08-01,iol_broker,-,interest,0.0,0.0,0.28,USD,1.0,0.28,0.0,MovimientosHistoricos (1).xls,Mov ID: 61037558 | Cr&#233;dito | Inversion Argentina Dolares
+2025-08-07,schwab_broker,SCHZ,fee,0.0,0.0,6.41,USD,1.0,6.41,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-08-07,schwab_broker,SCHZ,dividend,0.0,0.0,21.38,USD,1.0,21.38,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-08-07,schwab_broker,SCHZ,buy,0.6444,23.23,14.97,USD,1.0,14.97,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-09-01,iol_broker,-,interest,0.0,0.0,0.29,USD,1.0,0.29,0.0,MovimientosHistoricos (1).xls,Mov ID: 62240131 | Cr&#233;dito | Inversion Argentina Dolares
+2025-09-08,schwab_broker,SCHZ,fee,0.0,0.0,5.78,USD,1.0,5.78,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-09-08,schwab_broker,SCHZ,dividend,0.0,0.0,19.27,USD,1.0,19.27,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-09-08,schwab_broker,SCHZ,buy,0.574,23.5,13.49,USD,1.0,13.49,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-09-16,iol_broker,GOOGL,fee,0.0,0.0,21.2,ARS,0.000781,0.02,21.2,MovimientosHistoricos (1).xls,Mov ID: 144452780 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-09-16,iol_broker,GOOGL,dividend,0.0,0.0,1.98,USD,1.0,1.98,0.0,MovimientosHistoricos (1).xls,Mov ID: 144452779 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2025-09-24,schwab_broker,XLE,buy,1.2128,91.0299,110.4,USD,1.0,110.4,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | ENERGY SELECT SECTOR SPDR ETF
+2025-09-24,schwab_broker,XLE,dividend,0.0,0.0,157.71,USD,1.0,157.71,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | ENERGY SELECT SECTOR SPDR ETF
+2025-09-24,schwab_broker,XLE,fee,0.0,0.0,47.31,USD,1.0,47.31,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | ENERGY SELECT SECTOR SPDR ETF
+2025-09-25,iol_broker,XBI,dividend,0.0,0.0,0.1,USD,1.0,0.1,0.0,MovimientosHistoricos (1).xls,Mov ID: 145585741 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2025-09-25,iol_broker,XLE,fee,0.0,0.0,23.21,ARS,0.000781,0.02,23.21,MovimientosHistoricos (1).xls,Mov ID: 145538897 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-09-25,iol_broker,XLE,dividend,0.0,0.0,2.35,USD,1.0,2.35,0.0,MovimientosHistoricos (1).xls,Mov ID: 145538896 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2025-09-29,schwab_broker,SCHB,fee,0.0,0.0,19.76,USD,1.0,19.76,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2025-09-29,schwab_broker,SCHB,dividend,0.0,0.0,65.88,USD,1.0,65.88,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2025-09-29,schwab_broker,SCHB,buy,1.8009,25.61,46.12,USD,1.0,46.12,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2025-09-30,schwab_broker,SCHB,buy,390.0,25.5786,9975.67,USD,1.0,9975.67,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2025-09-30,schwab_broker,-,deposit,0.0,0.0,10000.0,USD,1.0,10000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N | Original Date: 10/01/2025 as of 09/30/2025"
+2025-10-01,iol_broker,-,interest,0.0,0.0,0.28,USD,1.0,0.28,0.0,MovimientosHistoricos (1).xls,Mov ID: 63368385 | Cr&#233;dito | Inversion Argentina Dolares
+2025-10-01,schwab_broker,-,withdrawal,0.0,0.0,10000.0,USD,1.0,10000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Adj | Tfr BANK OF AMERICA, N | Original Date: 10/03/2025 as of 10/01/2025"
+2025-10-03,schwab_broker,-,deposit,0.0,0.0,1000.0,USD,1.0,1000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N | Original Date: 10/06/2025 as of 10/03/2025"
+2025-10-06,schwab_broker,-,withdrawal,0.0,0.0,1000.0,USD,1.0,1000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Adj | Tfr BANK OF AMERICA, N | Original Date: 10/08/2025 as of 10/06/2025"
+2025-10-07,schwab_broker,SCHZ,dividend,0.0,0.0,19.78,USD,1.0,19.78,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-10-07,schwab_broker,SCHZ,fee,0.0,0.0,5.93,USD,1.0,5.93,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-10-07,schwab_broker,SCHZ,buy,0.5914,23.42,13.85,USD,1.0,13.85,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-10-09,schwab_broker,-,deposit,0.0,0.0,10000.0,USD,1.0,10000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr Bank of America, N, GERMAN HIDALGO Y | Original Date: 10/10/2025 as of 10/09/2025"
+2025-10-14,schwab_broker,SCHF,buy,430.0,23.07,9920.1,USD,1.0,9920.1,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB INTERNATIONAL EQUITY ETF
+2025-10-14,schwab_broker,-,deposit,0.0,0.0,10000.0,USD,1.0,10000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N, GERMAN HIDALGO Y | Original Date: 10/15/2025 as of 10/14/2025"
+2025-10-31,schwab_broker,SPY,dividend,0.0,0.0,76.91,USD,1.0,76.91,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | SPDR S&P ...500 ETF
+2025-10-31,schwab_broker,SPY,fee,0.0,0.0,23.07,USD,1.0,23.07,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SPDR S&P ...500 ETF
+2025-10-31,schwab_broker,SCHB,buy,190.0,26.36,5008.4,USD,1.0,5008.4,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2025-10-31,schwab_broker,-,deposit,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N, GERMAN HIDALGO Y | Original Date: 11/03/2025 as of 10/31/2025"
+2025-11-01,iol_broker,-,interest,0.0,0.0,0.3,USD,1.0,0.3,0.0,MovimientosHistoricos (1).xls,Mov ID: 64828222 | Cr&#233;dito | Inversion Argentina Dolares
+2025-11-03,iol_broker,SPY,dividend,0.0,0.0,27.25,USD,1.0,27.25,0.23,MovimientosHistoricos (1).xls,Mov ID: 150782801 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2025-11-03,iol_broker,SPY,fee,0.0,0.0,89.84,ARS,0.000725,0.07,89.84,MovimientosHistoricos (1).xls,Mov ID: 150561383 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-11-03,iol_broker,SPY,dividend,0.0,0.0,8.39,USD,1.0,8.39,0.0,MovimientosHistoricos (1).xls,Mov ID: 150561382 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2025-11-07,schwab_broker,SCHZ,dividend,0.0,0.0,21.53,USD,1.0,21.53,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-11-07,schwab_broker,SCHZ,fee,0.0,0.0,6.46,USD,1.0,6.46,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-11-07,schwab_broker,SCHZ,buy,0.6426,23.45,15.07,USD,1.0,15.07,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-11-21,schwab_broker,-,deposit,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N, GERMAN HIDALGO Y | Original Date: 11/24/2025 as of 11/21/2025"
+2025-11-26,schwab_broker,-,interest,0.0,0.0,0.02,USD,1.0,0.02,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 10/30-11/25
+2025-12-01,iol_broker,-,interest,0.0,0.0,0.3,USD,1.0,0.3,0.0,MovimientosHistoricos (1).xls,Mov ID: 65793406 | Cr&#233;dito | Inversion Argentina Dolares
+2025-12-04,schwab_broker,XLE,dividend,0.0,0.0,38.91,USD,1.0,38.91,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash In Lieu | STATE STRET ENRGY SLECT SEC SPDR ETF | Original Date: 12/08/2025 as of 12/04/2025
+2025-12-04,schwab_broker,XLE,stock_split,211.0,46.11,0.0,USD,1.0,0.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Stock Split | STATE STRET ENRGY SLECT SEC SPDR ETF | Original Date: 12/05/2025 as of 12/04/2025
+2025-12-05,schwab_broker,SCHZ,fee,0.0,0.0,5.65,USD,1.0,5.65,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-12-05,schwab_broker,SCHZ,dividend,0.0,0.0,18.82,USD,1.0,18.82,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-12-05,schwab_broker,SCHZ,buy,0.5621,23.43,13.17,USD,1.0,13.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-12-10,iol_broker,XLE,dividend,0.0,0.0,0.0,ARS,0.000725,0.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 154885785 | Pago de Dividendos(XLE) | Inversion Argentina Pesos
+2025-12-15,schwab_broker,SCHB,buy,3.2177,26.23,84.4,USD,1.0,84.4,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US BROAD MARKET ETF
+2025-12-15,schwab_broker,SCHB,fee,0.0,0.0,36.17,USD,1.0,36.17,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US BROAD MARKET ETF
+2025-12-15,schwab_broker,SCHB,dividend,0.0,0.0,120.57,USD,1.0,120.57,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US BROAD MARKET ETF
+2025-12-16,iol_broker,GOOGL,fee,0.0,0.0,21.27,ARS,0.000725,0.02,21.27,MovimientosHistoricos (1).xls,Mov ID: 155678997 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-12-16,iol_broker,GOOGL,dividend,0.0,0.0,1.98,USD,1.0,1.98,0.0,MovimientosHistoricos (1).xls,Mov ID: 155678996 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2025-12-16,schwab_broker,SCHF,fee,0.0,0.0,274.28,USD,1.0,274.28,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB INTERNATIONAL EQUITY ETF
+2025-12-16,schwab_broker,SCHF,dividend,0.0,0.0,914.27,USD,1.0,914.27,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB INTERNATIONAL EQUITY ETF
+2025-12-16,schwab_broker,SCHF,buy,26.9356,23.76,639.99,USD,1.0,639.99,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB INTERNATIONAL EQUITY ETF
+2025-12-24,schwab_broker,XLE,fee,0.0,0.0,47.32,USD,1.0,47.32,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | STATE STRET ENRGY SLECT SEC SPDR ETF
+2025-12-24,schwab_broker,XLE,dividend,0.0,0.0,157.73,USD,1.0,157.73,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | STATE STRET ENRGY SLECT SEC SPDR ETF
+2025-12-24,schwab_broker,XLE,buy,2.4806,44.5097,110.41,USD,1.0,110.41,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | STATE STRET ENRGY SLECT SEC SPDR ETF
+2025-12-26,iol_broker,XBI,dividend,0.0,0.0,1.61,USD,1.0,1.61,0.01,MovimientosHistoricos (1).xls,Mov ID: 157111458 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2025-12-26,schwab_broker,SCHZ,fee,0.0,0.0,5.93,USD,1.0,5.93,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2025-12-26,schwab_broker,SCHZ,dividend,0.0,0.0,19.76,USD,1.0,19.76,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2025-12-26,schwab_broker,SCHZ,buy,0.5903,23.43,13.83,USD,1.0,13.83,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2025-12-29,iol_broker,XLE,fee,0.0,0.0,0.61,ARS,0.000725,0.0,0.61,MovimientosHistoricos (1).xls,Mov ID: 157199713 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2025-12-29,iol_broker,XLE,dividend,0.0,0.0,2.34,USD,1.0,2.34,0.0,MovimientosHistoricos (1).xls,Mov ID: 157199712 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2025-12-30,schwab_broker,-,interest,0.0,0.0,0.15,USD,1.0,0.15,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Credit Interest | SCHWAB1 INT 11/26-12/29
+2025-12-30,schwab_broker,-,fee,0.0,0.0,0.04,USD,1.0,0.04,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB1 INT 11/26-12/29
+2026-01-01,iol_broker,-,interest,0.0,0.0,0.32,USD,1.0,0.32,0.0,MovimientosHistoricos (1).xls,Mov ID: 66862060 | Cr&#233;dito | Inversion Argentina Dolares
+2026-01-05,schwab_broker,SCHB,buy,190.0,26.5361,5041.86,USD,1.0,5041.86,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB US BROAD MARKET ETF
+2026-01-05,schwab_broker,SCHF,buy,195.0,24.595,4796.03,USD,1.0,4796.03,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB INTERNATIONAL EQUITY ETF
+2026-01-05,schwab_broker,-,deposit,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N, GERMAN HIDALGO Y | Original Date: 01/06/2026 as of 01/05/2026"
+2026-01-30,schwab_broker,SPY,dividend,0.0,0.0,83.72,USD,1.0,83.72,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Pr Yr Cash Div | STATE STREET SPDR S&P ...500 TRUST ETF
+2026-01-30,schwab_broker,SPY,fee,0.0,0.0,25.12,USD,1.0,25.12,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Pr Yr NRA Tax | STATE STREET SPDR S&P ...500 TRUST ETF
+2026-02-01,iol_broker,-,interest,0.0,0.0,0.32,USD,1.0,0.32,0.0,MovimientosHistoricos (1).xls,Mov ID: 68164555 | Cr&#233;dito | Inversion Argentina Dolares
+2026-02-02,iol_broker,SPY,dividend,0.0,0.0,29.65,USD,1.0,29.65,0.25,MovimientosHistoricos (1).xls,Mov ID: 162211633 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2026-02-03,iol_broker,SPY,fee,0.0,0.0,687.84,ARS,0.000704,0.48,687.84,MovimientosHistoricos (1).xls,Mov ID: 162539564 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-02-03,iol_broker,SPY,dividend,0.0,0.0,9.13,USD,1.0,9.13,0.0,MovimientosHistoricos (1).xls,Mov ID: 162539563 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2026-02-06,schwab_broker,SCHZ,fee,0.0,0.0,6.56,USD,1.0,6.56,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB US AGGREGATE BONDETF
+2026-02-06,schwab_broker,SCHZ,dividend,0.0,0.0,21.87,USD,1.0,21.87,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB US AGGREGATE BONDETF
+2026-02-06,schwab_broker,SCHZ,buy,0.6543,23.4,15.31,USD,1.0,15.31,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB US AGGREGATE BONDETF
+2026-03-01,iol_broker,-,interest,0.0,0.0,0.3,USD,1.0,0.3,0.0,MovimientosHistoricos (1).xls,Mov ID: 69143886 | Cr&#233;dito | Inversion Argentina Dolares
+2026-03-06,schwab_broker,SCHZ,buy,0.5962,23.38,13.94,USD,1.0,13.94,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. AGGREGATE BOND ETF
+2026-03-06,schwab_broker,SCHZ,dividend,0.0,0.0,19.91,USD,1.0,19.91,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. AGGREGATE BOND ETF
+2026-03-06,schwab_broker,SCHZ,fee,0.0,0.0,5.97,USD,1.0,5.97,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. AGGREGATE BOND ETF
+2026-03-10,schwab_broker,SCHB,buy,210.0,26.0899,5478.88,USD,1.0,5478.88,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Buy | SCHWAB U.S. BROAD MARKETETF
+2026-03-10,schwab_broker,-,deposit,0.0,0.0,5000.0,USD,1.0,5000.0,0.0,Individual_XXX938_Transactions_20260916-111746.csv,"Action: MoneyLink Transfer | Tfr BANK OF AMERICA, N, GERMAN HIDALGO Y | Original Date: 03/11/2026 as of 03/10/2026"
+2026-03-17,iol_broker,GOOGL,fee,0.0,0.0,20.41,ARS,0.000704,0.01,20.41,MovimientosHistoricos (1).xls,Mov ID: 167550269 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-03-17,iol_broker,GOOGL,dividend,0.0,0.0,1.98,USD,1.0,1.98,0.0,MovimientosHistoricos (1).xls,Mov ID: 167550268 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2026-03-25,schwab_broker,XLE,dividend,0.0,0.0,163.83,USD,1.0,163.83,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | STATE STREET ENERGY SELECT SECTOR SPDR ETF
+2026-03-25,schwab_broker,XLE,fee,0.0,0.0,49.15,USD,1.0,49.15,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | STATE STREET ENERGY SELECT SECTOR SPDR ETF
+2026-03-25,schwab_broker,XLE,buy,1.8856,60.819,114.68,USD,1.0,114.68,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | STATE STREET ENERGY SELECT SECTOR SPDR ETF
+2026-03-30,schwab_broker,SCHB,fee,0.0,0.0,38.86,USD,1.0,38.86,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. BROAD MARKETETF
+2026-03-30,schwab_broker,SCHB,dividend,0.0,0.0,129.52,USD,1.0,129.52,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. BROAD MARKETETF
+2026-03-30,schwab_broker,SCHB,buy,3.6932,24.5475,90.66,USD,1.0,90.66,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. BROAD MARKETETF
+2026-04-01,iol_broker,-,interest,0.0,0.0,0.34,USD,1.0,0.34,0.0,MovimientosHistoricos (1).xls,Mov ID: 70186966 | Cr&#233;dito | Inversion Argentina Dolares
+2026-04-07,iol_broker,XLE,fee,0.0,0.0,176.09,ARS,0.000704,0.12,176.09,MovimientosHistoricos (1).xls,Mov ID: 169858642 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-04-07,iol_broker,XLE,dividend,0.0,0.0,2.42,USD,1.0,2.42,0.0,MovimientosHistoricos (1).xls,Mov ID: 169858641 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2026-04-08,schwab_broker,SCHZ,buy,0.6097,23.29,14.2,USD,1.0,14.2,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. AGGREGATE BOND ETF
+2026-04-08,schwab_broker,SCHZ,fee,0.0,0.0,6.09,USD,1.0,6.09,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. AGGREGATE BOND ETF
+2026-04-08,schwab_broker,SCHZ,dividend,0.0,0.0,20.29,USD,1.0,20.29,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. AGGREGATE BOND ETF
+2026-04-30,iol_broker,SPY,fee,0.0,0.0,598.87,ARS,0.000676,0.4,598.87,MovimientosHistoricos (1).xls,Mov ID: 172442685 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-04-30,iol_broker,SPY,dividend,0.0,0.0,8.23,USD,1.0,8.23,0.0,MovimientosHistoricos (1).xls,Mov ID: 172442684 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2026-04-30,schwab_broker,SPY,dividend,0.0,0.0,75.47,USD,1.0,75.47,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | STATE STREET SPDR S&P ...500 ETF TRUST
+2026-04-30,schwab_broker,SPY,fee,0.0,0.0,22.64,USD,1.0,22.64,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | STATE STREET SPDR S&P ...500 ETF TRUST
+2026-05-01,iol_broker,-,interest,0.0,0.0,0.25,USD,1.0,0.25,0.0,MovimientosHistoricos (1).xls,Mov ID: 71166841 | Cr&#233;dito | Inversion Argentina Dolares
+2026-05-04,iol_broker,SPY,dividend,0.0,0.0,26.73,USD,1.0,26.73,0.23,MovimientosHistoricos (1).xls,Mov ID: 172598964 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2026-05-07,schwab_broker,SCHZ,fee,0.0,0.0,6.12,USD,1.0,6.12,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. AGGREGATE BOND ETF
+2026-05-07,schwab_broker,SCHZ,dividend,0.0,0.0,20.39,USD,1.0,20.39,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. AGGREGATE BOND ETF
+2026-05-07,schwab_broker,SCHZ,buy,0.6148,23.21,14.27,USD,1.0,14.27,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. AGGREGATE BOND ETF
+2026-06-01,iol_broker,SPY,dividend,0.0,0.0,0.0,ARS,0.000676,0.0,0.0,MovimientosHistoricos (1).xls,Mov ID: 175616514 | Pago de Dividendos(SPY) | Inversion Argentina Pesos
+2026-06-01,iol_broker,-,interest,0.0,0.0,0.23,USD,1.0,0.23,0.0,MovimientosHistoricos (1).xls,Mov ID: 72061304 | Cr&#233;dito | Inversion Argentina Dolares
+2026-06-05,schwab_broker,SCHZ,fee,0.0,0.0,6.3,USD,1.0,6.3,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. AGGREGATE BOND ETF
+2026-06-05,schwab_broker,SCHZ,dividend,0.0,0.0,21.01,USD,1.0,21.01,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. AGGREGATE BOND ETF
+2026-06-05,schwab_broker,SCHZ,buy,0.6398,22.99,14.71,USD,1.0,14.71,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. AGGREGATE BOND ETF
+2026-06-17,iol_broker,GOOGL,fee,0.0,0.0,21.97,ARS,0.000676,0.01,21.97,MovimientosHistoricos (1).xls,Mov ID: 177966031 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-06-17,iol_broker,GOOGL,dividend,0.0,0.0,2.08,USD,1.0,2.08,0.0,MovimientosHistoricos (1).xls,Mov ID: 177966030 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares
+2026-06-24,schwab_broker,XLE,buy,2.1555,53.3978,115.1,USD,1.0,115.1,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | STATE STREET ENERGY SELECT SECTOR SPDR ETF
+2026-06-24,schwab_broker,XLE,fee,0.0,0.0,49.33,USD,1.0,49.33,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | STATE STREET ENERGY SELECT SECTOR SPDR ETF
+2026-06-24,schwab_broker,XLE,dividend,0.0,0.0,164.43,USD,1.0,164.43,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | STATE STREET ENERGY SELECT SECTOR SPDR ETF
+2026-06-25,iol_broker,XBI,dividend,0.0,0.0,0.55,USD,1.0,0.55,0.0,MovimientosHistoricos (1).xls,Mov ID: 178976636 | Pago de Dividendos(XBI) | Inversion Estados Unidos Dolares
+2026-06-25,iol_broker,XLE,fee,0.0,0.0,186.05,ARS,0.000676,0.13,186.05,MovimientosHistoricos (1).xls,Mov ID: 178932535 | Pago de Dividendos(XLE) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-06-25,iol_broker,XLE,dividend,0.0,0.0,2.42,USD,1.0,2.42,0.0,MovimientosHistoricos (1).xls,Mov ID: 178932534 | Pago de Dividendos(XLE US$) | Inversion Argentina Dolares
+2026-06-29,schwab_broker,SCHB,fee,0.0,0.0,42.37,USD,1.0,42.37,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. BROAD MARKETETF
+2026-06-29,schwab_broker,SCHB,dividend,0.0,0.0,141.22,USD,1.0,141.22,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. BROAD MARKETETF
+2026-06-29,schwab_broker,SCHF,fee,0.0,0.0,77.74,USD,1.0,77.74,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB INTERNATIONAL EQUITY ETF
+2026-06-29,schwab_broker,SCHF,dividend,0.0,0.0,259.12,USD,1.0,259.12,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB INTERNATIONAL EQUITY ETF
+2026-06-29,schwab_broker,SCHB,buy,3.4563,28.6,98.85,USD,1.0,98.85,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. BROAD MARKETETF
+2026-06-29,schwab_broker,SCHF,buy,6.6415,27.31,181.38,USD,1.0,181.38,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB INTERNATIONAL EQUITY ETF
+2026-07-01,iol_broker,-,interest,0.0,0.0,0.18,USD,1.0,0.18,0.0,MovimientosHistoricos (1).xls,Mov ID: 73003429 | Cr&#233;dito | Inversion Argentina Dolares
+2026-07-08,schwab_broker,SCHZ,buy,0.6364,22.91,14.58,USD,1.0,14.58,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. AGGREGATE BOND ETF
+2026-07-08,schwab_broker,SCHZ,fee,0.0,0.0,6.25,USD,1.0,6.25,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. AGGREGATE BOND ETF
+2026-07-08,schwab_broker,SCHZ,dividend,0.0,0.0,20.83,USD,1.0,20.83,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. AGGREGATE BOND ETF
+2026-07-31,schwab_broker,SPY,dividend,0.0,0.0,79.95,USD,1.0,79.95,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Cash Dividend | STATE STREET SPDR S&P ...500 ETF TRUST
+2026-07-31,schwab_broker,SPY,fee,0.0,0.0,23.99,USD,1.0,23.99,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | STATE STREET SPDR S&P ...500 ETF TRUST
+2026-08-01,iol_broker,-,interest,0.0,0.0,0.18,USD,1.0,0.18,0.0,MovimientosHistoricos (1).xls,Mov ID: 73930957 | Cr&#233;dito | Inversion Argentina Dolares
+2026-08-03,iol_broker,SPY,dividend,0.0,0.0,28.32,USD,1.0,28.32,0.24,MovimientosHistoricos (1).xls,Mov ID: 183697243 | Pago de Dividendos(SPY) | Inversion Estados Unidos Dolares
+2026-08-03,iol_broker,SPY,fee,0.0,0.0,677.13,ARS,0.000676,0.46,677.13,MovimientosHistoricos (1).xls,Mov ID: 183660318 | Pago de Dividendos(SPY) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-08-03,iol_broker,SPY,dividend,0.0,0.0,8.72,USD,1.0,8.72,0.0,MovimientosHistoricos (1).xls,Mov ID: 183660317 | Pago de Dividendos(SPY US$) | Inversion Argentina Dolares
+2026-08-07,schwab_broker,SCHZ,fee,0.0,0.0,6.89,USD,1.0,6.89,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. AGGREGATE BOND ETF
+2026-08-07,schwab_broker,SCHZ,dividend,0.0,0.0,22.97,USD,1.0,22.97,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. AGGREGATE BOND ETF
+2026-08-07,schwab_broker,SCHZ,buy,0.7046,22.82,16.08,USD,1.0,16.08,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. AGGREGATE BOND ETF
+2026-09-01,iol_broker,-,interest,0.0,0.0,0.19,USD,1.0,0.19,0.0,MovimientosHistoricos (1).xls,Mov ID: 74875945 | Cr&#233;dito | Inversion Argentina Dolares
+2026-09-08,schwab_broker,SCHZ,fee,0.0,0.0,6.02,USD,1.0,6.02,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: NRA Tax Adj | SCHWAB U.S. AGGREGATE BOND ETF
+2026-09-08,schwab_broker,SCHZ,dividend,0.0,0.0,20.05,USD,1.0,20.05,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Dividend | SCHWAB U.S. AGGREGATE BOND ETF
+2026-09-08,schwab_broker,SCHZ,buy,0.6186,22.68,14.03,USD,1.0,14.03,0.0,Individual_XXX938_Transactions_20260916-111746.csv,Action: Reinvest Shares | SCHWAB U.S. AGGREGATE BOND ETF
+2026-09-15,iol_broker,GOOGL,fee,0.0,0.0,23.1,ARS,0.0006535948,0.02,23.1,MovimientosHistoricos (1).xls,Mov ID: 189037477 | Pago de Dividendos(GOOGL) | Inversion Argentina Pesos | Retención impositiva / deducción dividendo
+2026-09-15,iol_broker,GOOGL,dividend,0.0,0.0,2.08,USD,1.0,2.08,0.0,MovimientosHistoricos (1).xls,Mov ID: 189037476 | Pago de Dividendos(GOOGL US$) | Inversion Argentina Dolares

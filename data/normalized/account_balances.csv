@@ -1,1 +1,4 @@
 snapshot_date,as_of_date,account_id,currency,balance_original,fx_to_usd,balance_usd,liquidity_tier,source_type,source_file,notes
+2026-09-30,2026-09-16,schwab_broker,USD,175.8,1.0,175.8,invested,csv,Individual-Positions-2026-09-16-111957.csv,Schwab uninvested cash / cash investments
+2026-09-30,2026-09-15,iol_broker,ARS,447210.5,0.0006535948,292.29,invested,pdf,resumen_cuenta_15_9_2026.pdf,IOL Disponible Pesos en cuenta comitente
+2026-09-30,2026-09-15,iol_broker,USD,227.64,1.0,227.64,invested,pdf,resumen_cuenta_15_9_2026.pdf,IOL Disponible Dólares en cuenta comitente

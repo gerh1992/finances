@@ -24,6 +24,7 @@ Si entrás por primera vez, leé en este orden:
 7. `04_v1_operational_rules.md`
 8. `05_source_inventory.md`
 9. `06_ingestion_spec.md`
+10. `07_financial_dashboard_spec.md`
 
 ## Estructura
 - `context/` — onboarding, contexto operativo y reglas de interpretación
@@ -33,6 +34,7 @@ Si entrás por primera vez, leé en este orden:
 - `04_v1_operational_rules.md` — reglas operativas explícitas
 - `05_source_inventory.md` — inventario inicial de cuentas/fuentes V1
 - `06_ingestion_spec.md` — contrato de ingestión mensual
+- `07_financial_dashboard_spec.md` — especificación técnica y de producto del dashboard y portal financiero
 - `data/raw/` — archivos crudos por período e institución
 - `data/staging/` — extracciones o transformaciones intermedias antes de normalizar
 - `data/normalized/` — source of truth en CSV para balances, transacciones, gasto e inversiones

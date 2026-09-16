@@ -44,7 +44,7 @@ Nunca se debe editar el archivo crudo como si fuera el source of truth.
 financial-system-v1/
   docs/
   data/
-    raw/
+    raw/            # [IGNORADA EN GIT] Zona temporal de procesamiento local
       2026-05/
         galicia/
         mercadopago/
@@ -81,6 +81,8 @@ financial-system-v1/
 - `2026-05_galicia_statement_ars.csv`
 - `2026-05_galicia_statement_usd.pdf`
 - `2026-05_mercadopago_movements.csv`
+- `2026-05_schwab_positions.csv` (o export nativo `Individual-Positions-YYYY-MM-DD-*.csv`)
+- `2026-05_schwab_transactions.csv` (o export nativo `Individual_XXX_Transactions_YYYYMMDD-*.csv`)
 - `2026-05_iol_positions.xlsx`
 - `2026-05_iol_transactions.csv`
 - `2026-05_schwab_statement.pdf`
@@ -131,18 +133,40 @@ Debe permitir identificar:
 
 ---
 
-## 3. Brokers
-### Idealmente deben traer
-- fecha de valuación o cierre,
-- cash disponible,
-- posiciones,
-- market value o valuación,
-- compras/ventas/aportes/retiros si existe historial.
+## 3. Brokers (Inversiones Tradicionales)
 
-### Resultado esperado
-- snapshot de cash a `account_balances.csv` cuando corresponda,
-- posiciones a `investment_positions.csv`,
-- eventos a `investment_cashflows.csv` si el archivo lo permite.
+### A. Charles Schwab (CSV Exports nativos o canónicos)
+Procesado determinísticamente mediante `parsers/parse_schwab_csv.py`:
+1. **Archivo de Posiciones (`Individual-Positions-*.csv` o `YYYY-MM_schwab_positions.csv`)**:
+   - **Campos esperados**: `Symbol`, `Description`, `Qty (Quantity)`, `Price`, `Mkt Val (Market Value)`, `Cost Basis`, `Gain $ (Gain/Loss $)`, `Asset Type`.
+   - **Fecha de corte (`as_of_date`)**: Extraída de la cabecera del archivo (`Positions for account ... as of ... YYYY/MM/DD`).
+   - **Resultado en `investment_positions.csv`**: Se mapean todas las tenencias de activos (`SCHB`, `SCHF`, `SPY`, etc.) con sus cantidades, costo base y valuación de mercado.
+   - **Resultado en `account_balances.csv`**: La fila `Cash & Cash Investments` se persiste automáticamente como saldo de liquidez no invertida en la cuenta comitente (`account_id = schwab_broker`, `liquidity_tier = invested`, `currency = USD`).
+2. **Archivo de Transacciones (`Individual_*_Transactions_*.csv` o `YYYY-MM_schwab_transactions.csv`)**:
+   - **Campos esperados**: `Date`, `Action`, `Symbol`, `Description`, `Quantity`, `Price`, `Fees & Comm`, `Amount`.
+   - **Fechas**: Maneja fechas estándar y contables con `"as of"` (asignando la fecha efectiva real al evento).
+   - **Mapeo de eventos a `investment_cashflows.csv`**:
+     - `Buy`, `Reinvest Shares` → `buy`
+     - `Sell` → `sell`
+     - `Reinvest Dividend`, `Cash Dividend`, `Pr Yr Cash Div`, `Cash In Lieu` → `dividend`
+     - `MoneyLink Transfer`, `Wire Received` → `deposit` (o `withdrawal` si el monto es negativo)
+     - `Credit Interest`, `Interest Adj` → `interest`
+     - `NRA Tax Adj`, `Pr Yr NRA Tax` → `fee` (retención fiscal en origen)
+     - `Stock Split` → `stock_split`
+
+### B. Invertir Online (IOL)
+Procesamiento implementado mediante `parsers/parse_iol.py` y orquestado en `parsers/ingest.py`:
+
+1. **Operaciones Finalizadas (`OperacionesFinalizadas*.xls`)**:
+   - Boletos oficiales de compra y venta (`BCBA`, `NYSE`).
+   - Mapea a `investment_cashflows.csv`: `event_type in ['buy', 'sell']`, activos (`SPY`, `GOOGL`, `AL30`, `XLE`, `XBI`, `AAPL`, etc.), cantidades, precios pactados, comisiones e IVA.
+2. **Movimientos Históricos (`MovimientosHistoricos*.xls`)**:
+   - Movimientos de caja, dividendos (en ARS y USD), créditos por saldos remunerados (`interest`), retenciones impositivas (`fee`), depósitos y retiros.
+   - Mapea a `investment_cashflows.csv`: filtra liquidaciones de boletos para evitar duplicación con `OperacionesFinalizadas`.
+3. **Resumen de Cuenta Oficial (`resumen_cuenta_*.pdf`)**:
+   - Snapshot de tenencias al corte: `GOOGL`, `SPY`, `XLE`, `ADCGLOA` a `investment_positions.csv`.
+   - Saldos líquidos disponibles en ARS y USD a `account_balances.csv`.
+   - Conversión dinámica a USD usando cotización implícita CCL/MEP en `fx_rates.csv`.
 
 ---
 
@@ -159,68 +183,61 @@ Puede venir como mensaje simple del usuario:
 
 ---
 
-## Pipeline de ingestión mensual
-### Paso 1 — Recepción
-El usuario entrega archivos del período.
+## Control de Idempotencia y Prevención de Duplicados
 
-### Paso 2 — Archivo
-Hermes guarda/copía los archivos en:
-- `data/raw/YYYY-MM/institucion/`
+Para asegurar que un extracto no sea procesado y sumado dos veces a las tablas normalizadas, el orquestador implementa un control por huella digital (hash):
 
-### Paso 3 — Identificación
-Hermes identifica:
-- institución,
-- tipo de documento,
-- moneda,
-- período,
-- parser potencial.
-
-### Paso 4 — Parsing
-Si existe parser reusable:
-- usarlo.
-
-Si no existe:
-- inspeccionar formato,
-- documentar mapeo,
-- derivar lógica inicial reusable.
-
-### Paso 5 — Normalización
-Escribir o actualizar las tablas normalizadas.
-
-### Paso 6 — Validación
-Chequear al menos:
-- columnas mínimas presentes,
-- moneda coherente,
-- fecha usable,
-- no duplicación grosera,
-- balances razonables,
-- movimientos dudosos marcados.
-
-### Paso 7 — Reporte
-Con la normalización completa, producir el cierre mensual y sus recomendaciones.
+1. **Huella Única:** Cada archivo que ingresa al Inbox se lee y se calcula su hash `SHA-256`.
+2. **Registro de Ingestión:** Existe un archivo de control centralizado en `data/normalized/ingested_files.csv`.
+3. **Mapeo:** Antes de proceder con el parseo, se busca el hash en el registro. Si ya existe con estado `success`, el archivo se omite del flujo.
+4. **Esquema de `ingested_files.csv`:**
+   `file_name,file_hash,ingested_at,status,account_id,notes`
 
 ---
 
-## Política de parsers por institución
-### Regla
-Cada institución debe tender a tener un parser reusable o, como mínimo, una nota de mapping estable.
+## Pipeline de Ingestión Automatizado (Headless & API)
 
-### Objetivo
-Que el costo de ingestión baje con el tiempo.
+El proceso se ejecuta mediante el script `parsers/ingest.py` y opera de la siguiente manera:
 
-### Evolución esperada
-1. primer archivo = aprendizaje/manual + documentación,
-2. segundo archivo = parser más confiable,
-3. tercer archivo en adelante = reutilización casi automática.
+### Origen de los Datos (Headless)
+El script se conecta a la API de Google Drive utilizando una clave JSON de **Service Account** (`credentials.json`) ubicada en la raíz del repositorio.
+- Monitorea una carpeta remota **Inbox** (`DRIVE_INBOX_FOLDER_ID`).
+- Tras procesar con éxito cada archivo, lo mueve a una carpeta remota **Archive** (`DRIVE_ARCHIVE_FOLDER_ID`), organizándolos en subcarpetas `YYYY-MM/` o manteniéndolos en la raíz del Archive según configuración.
+
+### Interfaz del Orquestador (`ingest.py`)
+Soporta tres modos clave para facilitar la auditoría y depuración:
+1. **Modo normal:** `python parsers/ingest.py`
+   Procesa de forma desatendida todo el Inbox de Drive, descargando temporalmente, validando el hash, ejecutando los parsers correspondientes, actualizando los CSVs en `data/normalized/` e ingresando los archivos al Archive de Drive tras registrar el hash.
+2. **Modo Dry-Run:** `python parsers/ingest.py --dry-run`
+   Ejecuta todo el pipeline (descarga temporal, cálculo de hash, parseo local o llamada a Gemini para PDFs), pero **no escribe cambios en los CSVs consolidados ni altera la ubicación de los archivos en Google Drive**. Imprime el resultado estructurado en consola para validación previa rápida.
+3. **Modo Archivo Único:** `python parsers/ingest.py --file <path_local_o_id_drive>`
+   Dirige el proceso a un único archivo para aislar errores o probar formatos nuevos sin tocar el resto del Inbox.
+
+---
+
+## Política de parsers (Híbrida: PDF y CSV)
+
+### 1. Ingestión de PDFs (Parseador Genérico vía LLM)
+Para todos los documentos en formato **PDF** (extractos bancarios de Galicia, BofA, Schwab, etc.):
+- **Regla**: Se utiliza un único script centralizado `parsers/parse_pdf.py`.
+- **Estrategia**:
+  1. Extraer el texto del PDF de manera local preservando el diseño de las columnas (`pdftotext -layout` o `pdfplumber`).
+  2. Enviar el texto plano a la API de un LLM (Gemini) utilizando un esquema estructurado (JSON Schema) para mapear transacciones y saldos al formato de la base de datos.
+  3. Si el PDF es una imagen/escaneo, se procesa de forma multimodal (visión).
+- **Justificación**: Se evita tener que escribir y mantener parsers de código rígidos y frágiles para cada banco, lo cual reduce drásticamente el costo de mantenimiento.
+
+### 2. Ingestión de CSVs (Parsers Locales Deterministas)
+Para los documentos tabulares nativos en formato **CSV** o **Excel** (Mercado Pago, Charles Schwab, Invertir Online, Galicia export, Wise export, etc.):
+- **Regla**: Se utiliza un script específico por institución en la carpeta `parsers/` (ej. `parsers/parse_mercadopago_csv.py`, `parsers/parse_schwab_csv.py`).
+- **Estrategia**: Procesar el archivo de forma puramente determinista y local (usando `pandas` o el módulo `csv` de la librería estándar de Python) mapeando las columnas nativas al esquema normalizado.
+- **Justificación**: Rapidez absoluta, 100% de fiabilidad, y costo de tokens cero (0) al procesarse de forma local sin requerir llamadas al LLM.
 
 ---
 
 ## Manejo de cambios de formato
 Si una institución cambia su export:
-1. no sobrescribir lógica anterior a ciegas,
-2. registrar la diferencia,
-3. adaptar parser o crear variante,
-4. dejar trazabilidad de qué versión aplicó a qué archivo.
+1. Para **PDFs**: Modificar o refinar el prompt/JSON schema del parseador genérico si el cambio afecta la extracción semántica.
+2. Para **CSVs**: Adaptar el mapeo de columnas en el script específico de la institución, documentando en `logs/` la versión del export afectada.
 
 ---
 
