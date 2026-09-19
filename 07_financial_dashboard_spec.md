@@ -34,7 +34,7 @@ El dashboard consume los archivos CSV ubicados en `data/normalized/`. Ningún da
 
 | Archivo CSV | Propósito | Campos Clave Utilizados |
 | :--- | :--- | :--- |
-| **`investment_positions.csv`** | Snapshot actual de tenencias ETF en Schwab | `asset_id`, `asset_name`, `asset_class`, `quantity`, `cost_basis_original`, `market_value_usd`, `unrealized_pnl_usd`, `as_of_date` |
+| **`investment_positions.csv`** | Snapshot actual de tenencias de inversión (Schwab e IOL) | `asset_id`, `asset_name`, `asset_class`, `quantity`, `cost_basis_original`, `cost_basis_usd`, `market_value_usd`, `unrealized_pnl_usd`, `as_of_date` |
 | **`investment_cashflows.csv`** | 337 transacciones históricas (2023–2026) | `event_date`, `broker_account_id`, `asset_id`, `event_type` (`buy`, `dividend`, `fee`, `deposit`, `interest`), `quantity`, `price_original`, `gross_amount_usd`, `fees_original`, `notes` |
 | **`account_balances.csv`** | Saldos de caja y liquidez por cuenta | `account_id`, `currency`, `balance_original`, `balance_usd`, `liquidity_tier` (`immediate`, `short_term`, `invested`), `as_of_date` |
 | **`accounts.csv`** | Catálogo maestro de cuentas e instituciones | `account_id`, `account_name`, `institution`, `country`, `account_type`, `default_currency` |

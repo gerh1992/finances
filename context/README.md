@@ -11,8 +11,10 @@ Esta carpeta existe para que una persona o IA nueva pueda entender rápido:
 1. `finance-brief.md` — brief ejecutivo del sistema
 2. `current-state.md` — estado operativo y madurez actual
 3. `decision-rules.md` — reglas económicas y de interpretación que no conviene violar
-4. `data-sources.yaml` — mapa de fuentes, rol y prioridad
-5. `contributor-workflow.md` — cómo editar sin degradar el sistema
+4. `principles.md` — principios estratégicos de inversión, asignación de capital y liquidez
+5. `data-sources.yaml` — mapa de fuentes, rol y prioridad
+6. `contributor-workflow.md` — cómo editar sin degradar el sistema
+
 
 ## Qué NO debería vivir solo en el chat
 Si una regla o decisión cambia cómo se interpreta el sistema, debería terminar documentada acá o en los documentos raíz del repo.

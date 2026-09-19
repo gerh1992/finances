@@ -2,3 +2,13 @@ snapshot_date,as_of_date,account_id,currency,balance_original,fx_to_usd,balance_
 2026-09-30,2026-09-16,schwab_broker,USD,175.8,1.0,175.8,invested,csv,Individual-Positions-2026-09-16-111957.csv,Schwab uninvested cash / cash investments
 2026-09-30,2026-09-15,iol_broker,ARS,447210.5,0.0006535948,292.29,invested,pdf,resumen_cuenta_15_9_2026.pdf,IOL Disponible Pesos en cuenta comitente
 2026-09-30,2026-09-15,iol_broker,USD,227.64,1.0,227.64,invested,pdf,resumen_cuenta_15_9_2026.pdf,IOL Disponible Dólares en cuenta comitente
+2026-09-30,2026-09-17,galicia_ars,ARS,779353.8,0.0006535948,509.38,immediate,manual,manual_opening_balance,Saldo Galicia ARS apertura
+2026-09-30,2026-09-17,galicia_usd,USD,4270.0,1.0,4270.0,immediate,manual,manual_opening_balance,Saldo Galicia USD apertura
+2026-09-30,2026-09-17,mercadopago_ars,ARS,1290.0,0.0006535948,0.84,immediate,manual,manual_opening_balance,Saldo Mercado Pago ARS apertura
+2026-09-30,2026-09-17,bna_ars,ARS,5200.0,0.0006535948,3.4,immediate,manual,manual_opening_balance,Saldo Banco Nación ARS apertura
+2026-09-30,2026-09-17,payoneer_usd,USD,37400.0,1.0,37400.0,short_term,manual,manual_opening_balance,Saldo Payoneer USD apertura
+2026-09-30,2026-09-17,deel_usd,USD,56900.0,1.0,56900.0,short_term,manual,manual_opening_balance,Saldo Deel USD apertura
+2026-09-30,2026-09-17,bofa_usd,USD,27000.0,1.0,27000.0,immediate,manual,manual_opening_balance,Saldo Bank of America USD apertura
+2026-09-30,2026-09-17,citibank_usd,USD,7880.0,1.0,7880.0,immediate,manual,manual_opening_balance,Saldo Citibank USD apertura
+2026-09-30,2026-09-17,cash_manual,ARS,200000.0,0.0006535948,130.72,immediate,manual,manual_opening_balance,Efectivo pesos en mano apertura
+2026-09-30,2026-09-17,cash_manual,USD,600000.0,1.0,600000.0,immediate,manual,manual_opening_balance,Efectivo dólares caja de seguridad apertura

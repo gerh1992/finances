@@ -15,7 +15,7 @@ NORMALIZED_DIR = os.path.join(DATA_DIR, "normalized")
 POSITIONS_HEADERS = [
     "snapshot_date", "as_of_date", "broker_account_id", "asset_id", 
     "asset_name", "asset_class", "quantity", "currency", 
-    "cost_basis_original", "market_value_original", "fx_to_usd", 
+    "cost_basis_original", "cost_basis_usd", "market_value_original", "fx_to_usd", 
     "market_value_usd", "unrealized_pnl_usd", "notes"
 ]
 
@@ -199,6 +199,7 @@ def parse_positions(file_path, file_name=None, dry_run=False):
             "quantity": qty,
             "currency": "USD",
             "cost_basis_original": cost_basis,
+            "cost_basis_usd": cost_basis,
             "market_value_original": mkt_val,
             "fx_to_usd": 1.0,
             "market_value_usd": mkt_val,

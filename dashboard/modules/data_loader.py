@@ -50,6 +50,8 @@ def load_all_data() -> Dict[str, pd.DataFrame]:
     data["monthly_expenses"] = _read_csv("monthly_expense_summary.csv")
     data["transactions"] = _read_csv("transactions_normalized.csv")
     data["fx_rates"] = _read_csv("fx_rates.csv")
+    data["historical_valuations"] = _read_csv("historical_portfolio_valuations.csv")
+    data["historical_prices"] = _read_csv("historical_prices.csv")
 
     # Parse dates
     if not data["cashflows"].empty and "event_date" in data["cashflows"].columns:
@@ -58,4 +60,8 @@ def load_all_data() -> Dict[str, pd.DataFrame]:
     if not data["transactions"].empty and "txn_date" in data["transactions"].columns:
         data["transactions"]["txn_date"] = pd.to_datetime(data["transactions"]["txn_date"])
 
+    if not data["historical_valuations"].empty and "date" in data["historical_valuations"].columns:
+        data["historical_valuations"]["date"] = pd.to_datetime(data["historical_valuations"]["date"])
+
     return data
+

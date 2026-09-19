@@ -174,6 +174,7 @@ Resolver: “qué inversiones tengo y cuánto valen hoy”.
 
 ### Columnas
 - `snapshot_date`
+- `as_of_date`
 - `broker_account_id`
 - `asset_id`
 - `asset_name`
@@ -181,6 +182,7 @@ Resolver: “qué inversiones tengo y cuánto valen hoy”.
 - `quantity`
 - `currency`
 - `cost_basis_original`
+- `cost_basis_usd`
 - `market_value_original`
 - `fx_to_usd`
 - `market_value_usd`
@@ -189,6 +191,8 @@ Resolver: “qué inversiones tengo y cuánto valen hoy”.
 
 ### Reglas
 - Si el broker ya provee costo y valuación, V1 usa esos datos en vez de inventar pricing externo.
+- `cost_basis_original` expresa el costo en la moneda nativa del activo (`currency`: ARS para CEDEARs locales, USD para activos estadounidenses).
+- `cost_basis_usd` expresa el costo de adquisición dolarizado (al tipo de cambio histórico al momento de la compra o nativo USD).
 - `asset_class` puede empezar simple: `stock`, `etf`, `bond`, `fund`, `cash_equivalent`, `other`.
 - Si un dato no existe en el extracto, se deja explícito y no se inventa.
 

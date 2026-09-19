@@ -27,6 +27,11 @@ ASSET_COLOR_MAP = {
     "AAPL": "#94A3B8",  # Slate
     "XBI": "#F97316",   # Orange
     "AL30": "#EAB308",  # Yellow
+    "BTC": "#F7931A",   # Bitcoin Orange
+    "ETH": "#627EEA",   # Ethereum Blue
+    "BETH": "#818CF8",  # Staked ETH
+    "ETHW": "#94A3B8",  # Slate
+    "SXT": "#10B981",   # Emerald
     "Renta Variable EE.UU.": "#38BDF8",
     "Renta Variable Internacional": "#818CF8",
     "Sectorial Energía": "#F59E0B",
@@ -34,6 +39,11 @@ ASSET_COLOR_MAP = {
     "Renta Fija / Fondos USD": "#EC4899",
     "Sectorial Biotecnología": "#F97316",
     "Renta Fija / Bonos": "#EAB308",
+    "Criptomonedas": "#F7931A",
+    "Criptomonedas (Bitcoin)": "#F7931A",
+    "Criptomonedas (Ethereum)": "#627EEA",
+    "Criptomonedas (Ethereum Staking)": "#818CF8",
+    "Criptomonedas (Airdrops)": "#94A3B8",
 }
 
 
@@ -52,19 +62,19 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
         "🌐 Consolidado (Todas las Cuentas)": None,
         "🇺🇸 Charles Schwab (EE.UU.)": "schwab_broker",
         "🇦🇷 Invertir Online (IOL Argentina)": "iol_broker",
+        "🟡 Binance (Criptomonedas)": "binance_crypto",
     }
 
-    col_title, col_sel = st.columns([3, 2])
-    with col_title:
-        st.markdown("### 📈 Portafolio de Inversiones")
-    with col_sel:
-        selected_label = st.radio(
-            "Seleccionar Cuenta / Broker:",
-            options=list(broker_options.keys()),
-            horizontal=True,
-            index=0,
-            label_visibility="collapsed",
-        )
+    st.markdown("### 📈 Portafolio de Inversiones")
+    selected_label = st.radio(
+        "Seleccionar Cuenta / Broker:",
+        options=list(broker_options.keys()),
+        horizontal=True,
+        index=0,
+        label_visibility="collapsed",
+    )
+    st.markdown("<div style='height: 6px;'></div>", unsafe_allow_html=True)
+
 
     selected_broker_id = broker_options[selected_label]
 
@@ -76,7 +86,7 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
     else:
         f_positions = positions_df.copy()
         f_cashflows = cashflows_df.copy()
-        f_balances = balances_df[balances_df["account_id"].isin(["schwab_broker", "iol_broker"])].copy()
+        f_balances = balances_df[balances_df["account_id"].isin(["schwab_broker", "iol_broker", "binance_crypto"])].copy()
 
     # Calculate headline KPIs
     kpis = calculate_portfolio_kpis(f_positions, f_cashflows, f_balances, selected_broker_id)
@@ -86,8 +96,10 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
         cash_subtitle = "USD líquido en comitente"
     elif selected_broker_id == "iol_broker":
         cash_subtitle = "USD + ARS líquido (en USD)"
+    elif selected_broker_id == "binance_crypto":
+        cash_subtitle = "Stablecoins / USDT disponible"
     else:
-        cash_subtitle = "Liquidez total en brokers"
+        cash_subtitle = "Liquidez total en brokers/exchanges"
 
     # 1. Headline KPI Cards
     col1, col2, col3, col4, col5 = st.columns(5)
@@ -134,8 +146,14 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
     row2_col1, row2_col2 = st.columns([3, 2])
 
     with row2_col1:
-        st.markdown(f"#### 📊 Curva Histórica: Aportes vs. Valuación ({selected_label})")
-        curve_df = reconstruct_historical_curve(f_cashflows, f_positions)
+        st.markdown(f"#### 📊 Curva Histórica Real: Aportes vs. Valuación ({selected_label})")
+        hist_val_df = data.get("historical_valuations", pd.DataFrame())
+        curve_df = reconstruct_historical_curve(
+            f_cashflows,
+            f_positions,
+            historical_valuations_df=hist_val_df,
+            broker_account_id=selected_broker_id or "consolidated",
+        )
 
         if not curve_df.empty:
             fig_curve = go.Figure()
@@ -145,7 +163,8 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
                 go.Scatter(
                     x=curve_df["date"],
                     y=curve_df["portfolio_valuation"],
-                    name="Valuación Estimada",
+                    customdata=curve_df["unrealized_gain"],
+                    name="Valuación Real",
                     mode="lines",
                     line=dict(color="#10B981", width=2.5),
                     fill="tozeroy",
@@ -154,6 +173,8 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
                         "<b>Fecha:</b> %{x|%b %Y}<br>"
                         "<b>Valuación:</b> "
                         + ("$ ••••••" if privacy_mode else "$%{y:,.2f} USD")
+                        + "<br><b>Ganancia No Realizada:</b> "
+                        + ("$ ••••••" if privacy_mode else "$%{customdata:,.2f} USD")
                         + "<extra></extra>"
                     ),
                 )
@@ -174,6 +195,7 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
                     ),
                 )
             )
+
 
             fig_curve.update_layout(
                 template="plotly_dark",
@@ -361,6 +383,7 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
         disp_holdings["Broker"] = holdings_df["broker_account_id"].map({
             "schwab_broker": "Schwab",
             "iol_broker": "IOL",
+            "binance_crypto": "Binance",
         }).fillna(holdings_df["broker_account_id"])
         disp_holdings["Ticker"] = holdings_df["asset_id"]
         disp_holdings["Instrumento"] = holdings_df["display_name"]
@@ -373,7 +396,8 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
         disp_holdings["Precio Mercado"] = holdings_df["market_price"].apply(
             lambda v: format_currency(v, privacy_mode=privacy_mode)
         )
-        disp_holdings["Costo Base ($)"] = holdings_df["cost_basis_original"].apply(
+        cost_col = "cost_basis_usd" if "cost_basis_usd" in holdings_df.columns else "cost_basis_original"
+        disp_holdings["Costo Base ($)"] = holdings_df[cost_col].apply(
             lambda v: format_currency(v, privacy_mode=privacy_mode) if v > 0 else "-"
         )
         disp_holdings["Valuación Mercado ($)"] = holdings_df["market_value_usd"].apply(
@@ -438,6 +462,7 @@ def render_investments_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = 
         disp_cf["Broker"] = filtered_cf["broker_account_id"].map({
             "schwab_broker": "Schwab",
             "iol_broker": "IOL",
+            "binance_crypto": "Binance",
         }).fillna(filtered_cf["broker_account_id"])
         disp_cf["Tipo"] = filtered_cf["event_type"].str.upper()
         disp_cf["Activo"] = filtered_cf["asset_id"]

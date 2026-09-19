@@ -1,10 +1,13 @@
-snapshot_date,as_of_date,broker_account_id,asset_id,asset_name,asset_class,quantity,currency,cost_basis_original,market_value_original,fx_to_usd,market_value_usd,unrealized_pnl_usd,notes
-2026-09-30,2026-09-16,schwab_broker,SCHB,SCHWAB U.S. BROAD MARKETETF,etf,1878.8859,USD,45440.07,55079.54,1.0,55079.54,9639.47,Asset Type: ETFs & Closed End Funds
-2026-09-30,2026-09-16,schwab_broker,SCHF,SCHWAB INTERNATIONAL EQUITY ETF,etf,1577.0621,USD,33115.74,44071.0,1.0,44071.0,10955.26,Asset Type: ETFs & Closed End Funds
-2026-09-30,2026-09-16,schwab_broker,SCHZ,SCHWAB U.S. AGGREGATE BOND ETF,etf,262.3191,USD,6044.11,5893.68,1.0,5893.68,-150.43,Asset Type: ETFs & Closed End Funds
-2026-09-30,2026-09-16,schwab_broker,SPY,STATE STREET SPDR S&P 500 ETF TRUST,etf,42.0,USD,17233.71,31946.46,1.0,31946.46,14712.75,Asset Type: ETFs & Closed End Funds
-2026-09-30,2026-09-16,schwab_broker,XLE,STATE STREET ENERGY SELECT SECTOR SPDR ETF,etf,429.3738,USD,17119.79,27608.22,1.0,27608.22,10488.43,Asset Type: ETFs & Closed End Funds
-2026-09-30,2026-09-15,iol_broker,ADCGLOA,Adcap Renta Dólar,fund,97.1668,USD,131.08,200549.3602,1.0,131.08,0.0,Mercado: BCBA | Cotización: 1.349 USD
-2026-09-30,2026-09-15,iol_broker,GOOGL,Cedear Alphabet Inc. Cl. A,stock,845.0,ARS,1514.77,8040175.0,0.0006535948,5255.02,3740.25,Mercado: BCBA | Cotización: 9515.0 ARS
-2026-09-30,2026-09-15,iol_broker,SPY,Cedear Spdr S&P 500,etf,393.0,ARS,8493.49,7907160.0,0.0006535948,5168.08,-3325.41,Mercado: BCBA | Cotización: 20120.0 ARS
-2026-09-30,2026-09-15,iol_broker,XLE,Cedear Energy Select Sector Sp,etf,18.0,ARS,449.57,946800.0,0.0006535948,618.82,169.25,Mercado: BCBA | Cotización: 52600.0 ARS
+snapshot_date,as_of_date,broker_account_id,asset_id,asset_name,asset_class,quantity,currency,cost_basis_original,cost_basis_usd,market_value_original,fx_to_usd,market_value_usd,unrealized_pnl_usd,notes
+2026-09-30,2026-09-17,schwab_broker,SCHB,SCHWAB U.S. BROAD MARKETETF,etf,1878.8859,USD,45440.07,45440.07,55079.54,1.0,55079.54,9639.47,Asset Type: ETFs & Closed End Funds
+2026-09-30,2026-09-17,schwab_broker,SCHF,SCHWAB INTERNATIONAL EQUITY ETF,etf,1666.3,USD,35615.74,35615.74,46681.39,1.0,46681.39,11065.65,Asset Type: ETFs & Closed End Funds
+2026-09-30,2026-09-17,schwab_broker,SCHZ,SCHWAB U.S. AGGREGATE BOND ETF,etf,373.5409,USD,8544.11,8544.11,8396.3,1.0,8396.3,-147.81,Asset Type: ETFs & Closed End Funds
+2026-09-30,2026-09-17,schwab_broker,SPY,STATE STREET SPDR S&P 500 ETF TRUST,etf,42.0,USD,17233.71,17233.71,31946.46,1.0,31946.46,14712.75,Asset Type: ETFs & Closed End Funds
+2026-09-30,2026-09-17,schwab_broker,XLE,STATE STREET ENERGY SELECT SECTOR SPDR ETF,etf,429.3738,USD,17119.79,17119.79,27608.22,1.0,27608.22,10488.43,Asset Type: ETFs & Closed End Funds
+2026-09-30,2026-09-15,iol_broker,ADCGLOA,Adcap Renta Dólar,fund,97.1668,USD,131.08,131.08,200549.3602,1.0,131.08,0.0,Mercado: BCBA | Cotización: 1.349 USD
+2026-09-30,2026-09-15,iol_broker,GOOGL,Cedear Alphabet Inc. Cl. A,stock,845.0,ARS,590782.5,1514.77,8040175.0,0.0006535948,5255.02,3740.25,Mercado: BCBA | Cotización: 9515.0 ARS
+2026-09-30,2026-09-15,iol_broker,SPY,Cedear Spdr S&P 500,etf,393.0,ARS,1370040.5,8493.49,7907160.0,0.0006535948,5168.08,-3325.41,Mercado: BCBA | Cotización: 20120.0 ARS
+2026-09-30,2026-09-15,iol_broker,XLE,Cedear Energy Select Sector Sp,etf,18.0,ARS,91145.7,449.57,946800.0,0.0006535948,618.82,169.25,Mercado: BCBA | Cotización: 52600.0 ARS
+2026-09-30,2026-09-17,binance_crypto,BTC,Bitcoin (Binance Simple Earn),crypto,0.2236713,USD,8077.19,8077.19,17129.56,1.0,17129.56,9052.37,Binance Simple Earn Flexible
+2026-09-30,2026-09-17,binance_crypto,BETH,Ethereum (ETH 2.0 Staking),crypto,0.63251564,USD,1154.25,1154.25,1554.72,1.0,1554.72,400.47,Binance ETH 2.0 Staking (BETH)
+2026-09-30,2026-09-17,binance_crypto,ETHW,Ethereum PoW (Airdrop),crypto,0.57391429,USD,0.0,0.0,1.5,1.0,1.5,1.5,The Merge Airdrop (Spot Wallet)

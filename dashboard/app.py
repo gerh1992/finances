@@ -17,7 +17,7 @@ import pandas as pd
 from utils.ui_components import inject_custom_css
 from utils.formatting import format_currency, format_percent
 from modules.data_loader import load_all_data
-from modules.financial_math import calculate_portfolio_kpis
+from modules.financial_math import calculate_portfolio_kpis, calculate_liquidity_tiers
 from modules.investments_view import render_investments_view
 from modules.liquidity_view import render_liquidity_view
 from modules.expenses_view import render_expenses_view
@@ -76,7 +76,9 @@ def main():
         )
 
     with head_center:
-        nw_disp = format_currency(kpis["total_net_worth"], privacy_mode=st.session_state["privacy_mode"])
+        tiers = calculate_liquidity_tiers(balances_df, positions_df)
+        total_nw = tiers["total"]
+        nw_disp = format_currency(total_nw, privacy_mode=st.session_state["privacy_mode"])
         ret_disp = format_percent(kpis["unrealized_pnl_pct"], privacy_mode=st.session_state["privacy_mode"])
         delta_color = "#10B981" if kpis["unrealized_pnl_usd"] >= 0 else "#EF4444"
         arrow = "▲" if kpis["unrealized_pnl_usd"] >= 0 else "▼"
@@ -85,13 +87,13 @@ def main():
             f"""
             <div style="text-align: right; padding-right: 15px;">
                 <div style="color: #94A3B8; font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.05em;">
-                    Patrimonio Neto Consolidado
+                    Patrimonio Neto Total (360°)
                 </div>
                 <div style="font-size: 1.8rem; font-weight: 800; color: #F8FAFC; line-height: 1.2;">
                     {nw_disp}
                 </div>
                 <div style="color: {delta_color}; font-size: 0.85rem; font-weight: 600;">
-                    {arrow} {ret_disp} retorno global
+                    {arrow} {ret_disp} retorno en inversiones
                 </div>
             </div>
             """,
@@ -132,11 +134,12 @@ def main():
     # Navigation Tabs
     # ==========================================
     tab_inv, tab_liq, tab_exp, tab_nw = st.tabs([
-        "📈 Inversiones (Schwab)",
+        "📈 Inversiones & Rendimiento",
         "💧 Liquidez & Cuentas",
         "💸 Gastos & Flujo",
         "🏛️ Patrimonio Neto",
     ])
+
 
     with tab_inv:
         render_investments_view(data, privacy_mode=st.session_state["privacy_mode"])

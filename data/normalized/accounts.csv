@@ -10,3 +10,5 @@ mercadopago_ars,MercadoPago ARS,MercadoPago,AR,wallet,personal,ARS,true,Fuente i
 payoneer_usd,Payoneer USD,Payoneer,US,platform_balance,personal,USD,true,Saldo de plataforma con liquidez de corto plazo
 schwab_broker,Charles Schwab Broker,Charles Schwab,US,broker,personal,USD,true,Modelar cash y posiciones por separado
 wise_usd,Wise USD,Wise,US,wallet,personal,USD,true,Billetera/cuenta operativa en USD
+binance_crypto,Binance Crypto Exchange,Binance,global,broker,personal,USD,true,"Exchange crypto: Spot, Simple Earn y ETH 2.0 Staking"
+deel_usd,Deel USD,Deel,US,platform_balance,personal,USD,true,Plataforma de cobro laboral en USD

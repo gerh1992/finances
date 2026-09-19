@@ -144,6 +144,15 @@ Ejemplos:
 - `included_in_v1`: yes
 - `notes`: modelar cash y posiciones por separado; no tratar como “cuenta mezclada” sin estructura
 
+### `binance_crypto`
+- `institution`: Binance
+- `country`: global
+- `account_type`: broker
+- `default_currency`: USD
+- `liquidity_tier` esperado: `invested`
+- `included_in_v1`: yes
+- `notes`: exchange de criptomonedas (Spot, Simple Earn Flexible y ETH 2.0 Staking / BETH)
+
 ---
 
 ## 4. Efectivo manual

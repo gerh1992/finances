@@ -16,7 +16,7 @@ NORMALIZED_DIR = os.path.join(DATA_DIR, "normalized")
 POSITIONS_HEADERS = [
     "snapshot_date", "as_of_date", "broker_account_id", "asset_id", 
     "asset_name", "asset_class", "quantity", "currency", 
-    "cost_basis_original", "market_value_original", "fx_to_usd", 
+    "cost_basis_original", "cost_basis_usd", "market_value_original", "fx_to_usd", 
     "market_value_usd", "unrealized_pnl_usd", "notes"
 ]
 
@@ -488,38 +488,41 @@ def parse_iol_statement_pdf(filepath, source_filename=None, dry_run=False):
                 "quantity": qty,
                 "currency": curr,
                 "cost_basis_original": 0.0,
+                "cost_basis_usd": 0.0,
                 "market_value_original": val_orig,
                 "fx_to_usd": fx,
                 "market_value_usd": val_usd,
                 "unrealized_pnl_usd": 0.0,
                 "notes": f"Mercado: {m_mkt} | Cotización: {price} {curr}"
             })
-        # Cost basis map derived from audited purchase cashflows
+        # Cost basis map derived from audited purchase cashflows (original currency & USD)
         iol_cost_map = {
-            "ADCGLOA": 131.08,
-            "GOOGL": 1514.77,
-            "SPY": 8493.49,
-            "XLE": 449.57
+            "ADCGLOA": {"original": 131.08, "usd": 131.08},
+            "GOOGL": {"original": 590782.50, "usd": 1514.77},
+            "SPY": {"original": 1370040.50, "usd": 8493.49},
+            "XLE": {"original": 91145.70, "usd": 449.57}
         }
         for p in positions_to_add:
             sym = p["asset_id"]
             if sym in iol_cost_map:
-                c = iol_cost_map[sym]
-                p["cost_basis_original"] = c
-                p["unrealized_pnl_usd"] = round(p["market_value_usd"] - c, 2)
+                p["cost_basis_original"] = iol_cost_map[sym]["original"]
+                p["cost_basis_usd"] = iol_cost_map[sym]["usd"]
+                p["unrealized_pnl_usd"] = round(p["market_value_usd"] - p["cost_basis_usd"], 2)
     else:
         # Fallback to hardcoded extracted table for this specific PDF if regex didn't match all lines
         fx_ars = get_fx_rate(as_of_date, "ARS")
         iol_cost_map = {
-            "ADCGLOA": 131.08,
-            "GOOGL": 1514.77,
-            "SPY": 8493.49,
-            "XLE": 449.57
+            "ADCGLOA": {"original": 131.08, "usd": 131.08},
+            "GOOGL": {"original": 590782.50, "usd": 1514.77},
+            "SPY": {"original": 1370040.50, "usd": 8493.49},
+            "XLE": {"original": 91145.70, "usd": 449.57}
         }
         for sym, name, a_class, qty, curr, val_orig, price, ar_val in pos_lines:
             fx = fx_ars if curr == "ARS" else 1.0
             val_usd = round(val_orig * fx, 2) if curr == "ARS" else round(qty * price, 2)
-            c = iol_cost_map.get(sym, 0.0)
+            cost_info = iol_cost_map.get(sym, {"original": 0.0, "usd": 0.0})
+            c_orig = cost_info["original"]
+            c_usd = cost_info["usd"]
             positions_to_add.append({
                 "snapshot_date": snapshot_date,
                 "as_of_date": as_of_date,
@@ -529,11 +532,12 @@ def parse_iol_statement_pdf(filepath, source_filename=None, dry_run=False):
                 "asset_class": a_class,
                 "quantity": qty,
                 "currency": curr,
-                "cost_basis_original": c,
+                "cost_basis_original": c_orig,
+                "cost_basis_usd": c_usd,
                 "market_value_original": val_orig,
                 "fx_to_usd": fx,
                 "market_value_usd": val_usd,
-                "unrealized_pnl_usd": round(val_usd - c, 2) if c > 0 else 0.0,
+                "unrealized_pnl_usd": round(val_usd - c_usd, 2) if c_usd > 0 else 0.0,
                 "notes": f"Cotización: {price} {curr} | Valuación ARS: {ar_val}"
             })
 

@@ -51,10 +51,14 @@ def render_net_worth_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
     with row2_c1:
         st.markdown("#### 🥧 Composición del Patrimonio")
         nw_breakdown = pd.DataFrame([
-            {"Componente": "Inversiones en ETFs (Schwab)", "Monto": kpis["total_market_value"], "Color": "#38BDF8"},
-            {"Componente": "Caja en Broker (Schwab)", "Monto": kpis["broker_cash"], "Color": "#10B981"},
-            {"Componente": "Liquidez en Otras Cuentas", "Monto": max(0.0, tiers["immediate"] + tiers["short_term"]), "Color": "#818CF8"},
+            {"Componente": "Portafolio Inversiones", "Monto": kpis["total_market_value"], "Color": "#38BDF8"},
+            {"Componente": "Liquidez Inmediata (Bancos & Efectivo)", "Monto": tiers["immediate"], "Color": "#10B981"},
+            {"Componente": "Liquidez Corto Plazo (Plataformas)", "Monto": tiers["short_term"], "Color": "#F59E0B"},
+            {"Componente": "Caja en Brokers", "Monto": kpis["broker_cash"], "Color": "#818CF8"},
         ])
+        # Filter out zero components
+        nw_breakdown = nw_breakdown[nw_breakdown["Monto"] > 0]
+
         fig_nw = go.Figure(
             data=[
                 go.Pie(
@@ -85,12 +89,15 @@ def render_net_worth_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
     with row2_c2:
         st.markdown("#### 📋 Balance Consolidado")
         bs_items = [
-            {"Categoría": "Activo", "Ítem": "Portafolio Inversión (ETFs)", "Valuación USD": kpis["total_market_value"]},
-            {"Categoría": "Activo", "Ítem": "Caja no invertida en Broker", "Valuación USD": kpis["broker_cash"]},
-            {"Categoría": "Pasivo", "Ítem": "Deuda de tarjetas / Préstamos", "Valuación USD": 0.0},
+            {"Categoría": "Activo", "Ítem": "Portafolio Inversión (ETFs, CEDEARs, Cripto)", "Valuación USD": kpis["total_market_value"]},
+            {"Categoría": "Activo", "Ítem": "Liquidez Inmediata (Bancos, Billeteras, Efectivo)", "Valuación USD": tiers["immediate"]},
+            {"Categoría": "Activo", "Ítem": "Liquidez Corto Plazo (Deel, Payoneer)", "Valuación USD": tiers["short_term"]},
+            {"Categoría": "Activo", "Ítem": "Caja no invertida en Brokers", "Valuación USD": kpis["broker_cash"]},
+            {"Categoría": "Pasivo", "Ítem": "Deuda de tarjetas / Préstamos", "Valuación USD": total_liabilities},
         ]
         df_bs = pd.DataFrame(bs_items)
         df_bs["Valuación USD"] = df_bs["Valuación USD"].apply(
             lambda v: format_currency(v, privacy_mode=privacy_mode)
         )
         st.dataframe(df_bs, use_container_width=True, hide_index=True)
+

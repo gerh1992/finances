@@ -40,7 +40,7 @@ def render_liquidity_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
         render_kpi_card(
             title="Capital Invertido",
             value=format_currency(tiers["invested"], privacy_mode=privacy_mode),
-            subtitle="Portafolio bursátil (Schwab)",
+            subtitle="Portafolio bursátil y cripto",
         )
     with col4:
         render_kpi_card(
@@ -57,8 +57,8 @@ def render_liquidity_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
     with row2_c1:
         st.markdown("#### 🎯 Distribución por Tiers de Liquidez")
         tier_data = pd.DataFrame([
-            {"Tier": "Inmediata (Día a día)", "Monto": tiers["immediate"], "Color": "#10B981"},
-            {"Tier": "Corto Plazo", "Monto": tiers["short_term"], "Color": "#38BDF8"},
+            {"Tier": "Inmediata (Día a día / Cash)", "Monto": tiers["immediate"], "Color": "#10B981"},
+            {"Tier": "Corto Plazo (Plataformas)", "Monto": tiers["short_term"], "Color": "#38BDF8"},
             {"Tier": "Invertida (Largo Plazo)", "Monto": tiers["invested"], "Color": "#818CF8"},
         ])
         fig_tiers = go.Figure(
@@ -100,7 +100,20 @@ def render_liquidity_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
     st.markdown("---")
     st.markdown("#### 💳 Saldos Registrados por Cuenta")
     if not balances_df.empty:
+        acc_map = {}
+        if not accounts_df.empty and "account_id" in accounts_df.columns:
+            acc_map = dict(zip(accounts_df["account_id"], accounts_df["account_name"]))
+
+        tier_labels = {
+            "immediate": "🟢 Inmediata",
+            "short_term": "🔵 Corto Plazo",
+            "invested": "🟣 Invertida",
+        }
+
         disp_bal = balances_df[["account_id", "currency", "balance_original", "balance_usd", "liquidity_tier", "notes"]].copy()
+        disp_bal["account_name"] = disp_bal["account_id"].map(acc_map).fillna(disp_bal["account_id"])
+        disp_bal["liquidity_tier"] = disp_bal["liquidity_tier"].map(tier_labels).fillna(disp_bal["liquidity_tier"])
+
         disp_bal["balance_original"] = disp_bal.apply(
             lambda r: format_currency(r["balance_original"], currency=r["currency"], privacy_mode=privacy_mode),
             axis=1,
@@ -108,7 +121,9 @@ def render_liquidity_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
         disp_bal["balance_usd"] = disp_bal["balance_usd"].apply(
             lambda v: format_currency(v, privacy_mode=privacy_mode)
         )
-        disp_bal.columns = ["Cuenta ID", "Moneda", "Saldo Original", "Saldo USD", "Tier Liquidez", "Detalle"]
+        disp_bal = disp_bal[["account_name", "currency", "balance_original", "balance_usd", "liquidity_tier", "notes"]]
+        disp_bal.columns = ["Cuenta", "Moneda", "Saldo Original", "Saldo USD", "Tier Liquidez", "Detalle"]
         st.dataframe(disp_bal, use_container_width=True, hide_index=True)
     else:
         st.info("Sin saldos registrados en `account_balances.csv`.")
+

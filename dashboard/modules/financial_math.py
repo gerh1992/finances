@@ -1,7 +1,8 @@
 """Financial calculations and quantitative algorithms for the dashboard."""
-from typing import Dict, Any, Tuple
+from typing import Dict, Any, Tuple, Optional
 import pandas as pd
 import numpy as np
+
 
 
 ASSET_CLASS_MAPPING = {
@@ -17,6 +18,11 @@ ASSET_CLASS_MAPPING = {
     "AL30": "Renta Fija / Bonos Soberanos AR",
     "AL30D": "Renta Fija / Bonos Soberanos AR",
     "AL30C": "Renta Fija / Bonos Soberanos AR",
+    "BTC": "Criptomonedas (Bitcoin)",
+    "ETH": "Criptomonedas (Ethereum)",
+    "BETH": "Criptomonedas (Ethereum Staking)",
+    "ETHW": "Criptomonedas (Airdrops)",
+    "SXT": "Criptomonedas (Airdrops)",
 }
 
 BROAD_CLASS_MAPPING = {
@@ -32,6 +38,11 @@ BROAD_CLASS_MAPPING = {
     "AL30": "Renta Fija / Bonos",
     "AL30D": "Renta Fija / Bonos",
     "AL30C": "Renta Fija / Bonos",
+    "BTC": "Criptomonedas",
+    "ETH": "Criptomonedas",
+    "BETH": "Criptomonedas",
+    "ETHW": "Criptomonedas",
+    "SXT": "Criptomonedas",
 }
 
 ASSET_FULL_NAMES = {
@@ -47,15 +58,20 @@ ASSET_FULL_NAMES = {
     "AL30": "Bono Rep. Argentina USD 2030 (Pesos)",
     "AL30D": "Bono Rep. Argentina USD 2030 (MEP)",
     "AL30C": "Bono Rep. Argentina USD 2030 (Cable)",
+    "BTC": "Bitcoin (BTC)",
+    "ETH": "Ethereum (ETH)",
+    "BETH": "Binance Beacon ETH (Staked ETH)",
+    "ETHW": "Ethereum PoW (Airdrop)",
+    "SXT": "Space and Time (Airdrop)",
 }
 
 
 def calculate_holdings_metrics(positions_df: pd.DataFrame) -> pd.DataFrame:
     """
     Computes holding-level financial metrics:
-    - AvgCost_i = cost_basis_original_i / quantity_i
+    - AvgCost_i = cost_basis_usd_i / quantity_i
     - MarketPrice_i = market_value_usd_i / quantity_i
-    - UnrealizedPnL%_i = ((market_value_usd_i - cost_basis_original_i) / cost_basis_original_i) * 100
+    - UnrealizedPnL%_i = ((market_value_usd_i - cost_basis_usd_i) / cost_basis_usd_i) * 100
     - Weight%_i = (market_value_usd_i / sum(market_value_usd_j)) * 100
     """
     if positions_df.empty:
@@ -64,10 +80,11 @@ def calculate_holdings_metrics(positions_df: pd.DataFrame) -> pd.DataFrame:
     df = positions_df.copy()
     total_val = df["market_value_usd"].sum()
 
-    df["avg_cost"] = df["cost_basis_original"] / df["quantity"]
+    cost_col = "cost_basis_usd" if "cost_basis_usd" in df.columns else "cost_basis_original"
+    df["avg_cost"] = df[cost_col] / df["quantity"]
     df["market_price"] = df["market_value_usd"] / df["quantity"]
     df["unrealized_pnl_pct"] = (
-        (df["market_value_usd"] - df["cost_basis_original"]) / df["cost_basis_original"]
+        (df["market_value_usd"] - df[cost_col]) / df[cost_col]
     ) * 100
     df["weight_pct"] = (df["market_value_usd"] / total_val) * 100 if total_val > 0 else 0
 
@@ -85,8 +102,9 @@ def calculate_portfolio_kpis(
     broker_account_id: str = None,
 ) -> Dict[str, Any]:
     """Computes headline KPIs for the investment portfolio (per-broker or consolidated)."""
+    cost_col = "cost_basis_usd" if "cost_basis_usd" in positions_df.columns else "cost_basis_original"
     total_market_val = float(positions_df["market_value_usd"].sum()) if not positions_df.empty else 0.0
-    total_cost_basis = float(positions_df["cost_basis_original"].sum()) if not positions_df.empty else 0.0
+    total_cost_basis = float(positions_df[cost_col].sum()) if not positions_df.empty else 0.0
     unrealized_pnl_usd = total_market_val - total_cost_basis
     unrealized_pnl_pct = (unrealized_pnl_usd / total_cost_basis * 100) if total_cost_basis > 0 else 0.0
 
@@ -146,14 +164,55 @@ def calculate_portfolio_kpis(
 def reconstruct_historical_curve(
     cashflows_df: pd.DataFrame,
     positions_df: pd.DataFrame,
+    historical_valuations_df: Optional[pd.DataFrame] = None,
+    broker_account_id: Optional[str] = None,
 ) -> pd.DataFrame:
     """
-    Reconstructs monthly portfolio historical curve cleanly and smoothly:
-    - Cumulative net capital contributions (external deposits minus external withdrawals)
-    - Smooth valuation trajectory that converges exactly to current audited market value
-    - Zero artificial drops on internal asset rebalancing/sales
-    - No hardcoded dates or arbitrary branch jumps
+    Reconstructs the authentic monthly portfolio historical curve:
+    - True cumulative net capital contributions (external deposits minus external withdrawals)
+    - Real historical market valuation reconstructed from transaction ledger and monthly market closing prices
+    - Cost basis and true unrealized capital gains
+    - Zero synthetic compounding factors or artificial smoothing
     """
+    # 1. If historical valuations DataFrame is passed or available on disk, use it
+    if historical_valuations_df is None or historical_valuations_df.empty:
+        from pathlib import Path
+        data_path = Path(__file__).resolve().parents[2] / "data" / "normalized" / "historical_portfolio_valuations.csv"
+        if data_path.exists():
+            try:
+                historical_valuations_df = pd.read_csv(data_path)
+                if "date" in historical_valuations_df.columns:
+                    historical_valuations_df["date"] = pd.to_datetime(historical_valuations_df["date"])
+            except Exception:
+                historical_valuations_df = pd.DataFrame()
+
+    if historical_valuations_df is not None and not historical_valuations_df.empty:
+        df = historical_valuations_df.copy()
+        if "date" in df.columns:
+            df["date"] = pd.to_datetime(df["date"])
+
+        scope = broker_account_id
+        if not scope:
+            if not positions_df.empty:
+                b_ids = positions_df["broker_account_id"].unique()
+                if len(b_ids) == 1:
+                    scope = b_ids[0]
+                else:
+                    scope = "consolidated"
+            else:
+                scope = "consolidated"
+
+        sub = df[df["broker_account_id"] == scope].copy()
+        if sub.empty and scope != "consolidated":
+            sub = df[df["broker_account_id"] == "consolidated"].copy()
+
+        if not sub.empty:
+            sub = sub.sort_values("date").reset_index(drop=True)
+            sub["month_label"] = sub["month"]
+            sub["deployed_capital"] = sub["cost_basis"]
+            return sub
+
+    # 2. Honest fallback: if historical prices are unavailable, plot real net capital contributions
     if cashflows_df.empty:
         return pd.DataFrame()
 
@@ -161,55 +220,31 @@ def reconstruct_historical_curve(
     df["event_date"] = pd.to_datetime(df["event_date"])
     df["ym"] = df["event_date"].dt.to_period("M")
 
-    target_val = float(positions_df["market_value_usd"].sum()) if not positions_df.empty else 0.0
-
     min_period = df["ym"].min()
     max_period = pd.Period("2026-09", "M")
     months = pd.period_range(min_period, max_period, freq="M")
 
-    monthly_net_deposits = []
-    for m in months:
-        sub = df[df["ym"] == m]
-        dep = float(sub[sub["event_type"] == "deposit"]["gross_amount_usd"].sum())
-        withd = float(sub[sub["event_type"] == "withdrawal"]["gross_amount_usd"].sum())
-        monthly_net_deposits.append(dep - withd)
-
-    cum_deposits = np.cumsum(monthly_net_deposits)
-    final_deposits = cum_deposits[-1] if len(cum_deposits) > 0 else 0.0
-    target_gain = max(0.0, target_val - final_deposits)
-
-    n = len(months)
-    weights = np.zeros(n)
-
-    for i in range(n):
-        w = 0.0
-        for k in range(i + 1):
-            if monthly_net_deposits[k] > 0:
-                months_in_market = (i - k)
-                # Trend weighting factor reflecting broader market compounding
-                market_factor = 1.0 + 0.008 * months_in_market
-                w += monthly_net_deposits[k] * months_in_market * market_factor
-        weights[i] = w
-
-    if weights[-1] > 0:
-        gain_curve = target_gain * (weights / weights[-1])
-    else:
-        gain_curve = np.zeros(n)
-
-    val_curve = cum_deposits + gain_curve
-
     monthly_records = []
-    for i, m in enumerate(months):
+    for m in months:
+        sub = df[df["ym"] <= m]
+        dep = float(sub[sub["event_type"] == "deposit"]["gross_amount_usd"].sum())
+        wth = float(sub[sub["event_type"] == "withdrawal"]["gross_amount_usd"].sum())
+        net_deposits = dep - wth
+
         monthly_records.append({
-            "date": m.to_timestamp(),
+            "date": m.to_timestamp(how="end"),
             "month_label": str(m),
-            "net_deposits": round(float(cum_deposits[i]), 2),
-            "deployed_capital": round(float(cum_deposits[i]), 2),
-            "portfolio_valuation": round(float(val_curve[i]), 2),
-            "unrealized_gain": round(float(gain_curve[i]), 2),
+            "net_deposits": round(net_deposits, 2),
+            "cost_basis": round(net_deposits, 2),
+            "deployed_capital": round(net_deposits, 2),
+            "broker_cash": 0.0,
+            "holdings_value": round(net_deposits, 2),
+            "portfolio_valuation": round(net_deposits, 2),
+            "unrealized_gain": 0.0,
         })
 
     return pd.DataFrame(monthly_records)
+
 
 
 def calculate_asset_allocation(positions_df: pd.DataFrame, by_class: bool = False) -> pd.DataFrame:

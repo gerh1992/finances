@@ -313,7 +313,7 @@ def normalize_response(json_path, source_filename):
         pos_headers = [
             "snapshot_date", "as_of_date", "broker_account_id", "asset_id", 
             "asset_name", "asset_class", "quantity", "currency", 
-            "cost_basis_original", "market_value_original", "fx_to_usd", 
+            "cost_basis_original", "cost_basis_usd", "market_value_original", "fx_to_usd", 
             "market_value_usd", "unrealized_pnl_usd", "notes"
         ]
         df_pos = load_csv_safely(pos_filepath, pos_headers)
@@ -329,7 +329,8 @@ def normalize_response(json_path, source_filename):
             snapshot_date = get_last_day_of_month(as_of)
             fx = float(pos.get("fx_to_usd", get_fx_rate(as_of, currency)))
             mv_usd = round(mv_orig * fx, 2) if currency != "USD" else mv_orig
-            pnl_usd = round((mv_orig - cost_orig) * fx, 2) if cost_orig > 0 else 0.0
+            cost_usd = float(pos.get("cost_basis_usd")) if pos.get("cost_basis_usd") is not None else (round(cost_orig * fx, 2) if currency != "USD" else cost_orig)
+            pnl_usd = round(mv_usd - cost_usd, 2) if cost_usd > 0 else 0.0
             
             new_row = {
                 "snapshot_date": snapshot_date,
@@ -341,6 +342,7 @@ def normalize_response(json_path, source_filename):
                 "quantity": qty,
                 "currency": currency,
                 "cost_basis_original": cost_orig,
+                "cost_basis_usd": cost_usd,
                 "market_value_original": mv_orig,
                 "fx_to_usd": fx,
                 "market_value_usd": mv_usd,
