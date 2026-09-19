@@ -21,7 +21,12 @@ def render_net_worth_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
     tiers = calculate_liquidity_tiers(balances_df, positions_df)
 
     total_assets = tiers["total"]
-    total_liabilities = 0.0  # Zero credit card debt registered currently
+    total_liabilities = 0.0
+    if not balances_df.empty and "balance_usd" in balances_df.columns:
+        neg_mask = balances_df["balance_usd"] < 0
+        if neg_mask.any():
+            total_liabilities = float(abs(balances_df.loc[neg_mask, "balance_usd"].sum()))
+
     net_worth = total_assets - total_liabilities
 
     col1, col2, col3 = st.columns(3)
@@ -41,8 +46,9 @@ def render_net_worth_view(data: Dict[str, pd.DataFrame], privacy_mode: bool = Fa
         render_kpi_card(
             title="Pasivos Totales (Deuda)",
             value=format_currency(total_liabilities, privacy_mode=privacy_mode),
-            subtitle="Deuda en tarjetas registrada: $0.00",
+            subtitle=f"Deuda de tarjetas: {format_currency(total_liabilities, privacy_mode=privacy_mode)}",
         )
+
 
     st.markdown("---")
 

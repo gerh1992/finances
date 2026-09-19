@@ -489,7 +489,7 @@ def parse_iol_statement_pdf(filepath, source_filename=None, dry_run=False):
                 "currency": curr,
                 "cost_basis_original": 0.0,
                 "cost_basis_usd": 0.0,
-                "market_value_original": val_orig,
+                "market_value_original": val_usd if curr == "USD" else val_orig,
                 "fx_to_usd": fx,
                 "market_value_usd": val_usd,
                 "unrealized_pnl_usd": 0.0,
@@ -497,7 +497,7 @@ def parse_iol_statement_pdf(filepath, source_filename=None, dry_run=False):
             })
         # Cost basis map derived from audited purchase cashflows (original currency & USD)
         iol_cost_map = {
-            "ADCGLOA": {"original": 131.08, "usd": 131.08},
+            "ADCGLOA": {"original": 100.0, "usd": 100.0},
             "GOOGL": {"original": 590782.50, "usd": 1514.77},
             "SPY": {"original": 1370040.50, "usd": 8493.49},
             "XLE": {"original": 91145.70, "usd": 449.57}
@@ -512,7 +512,7 @@ def parse_iol_statement_pdf(filepath, source_filename=None, dry_run=False):
         # Fallback to hardcoded extracted table for this specific PDF if regex didn't match all lines
         fx_ars = get_fx_rate(as_of_date, "ARS")
         iol_cost_map = {
-            "ADCGLOA": {"original": 131.08, "usd": 131.08},
+            "ADCGLOA": {"original": 100.0, "usd": 100.0},
             "GOOGL": {"original": 590782.50, "usd": 1514.77},
             "SPY": {"original": 1370040.50, "usd": 8493.49},
             "XLE": {"original": 91145.70, "usd": 449.57}

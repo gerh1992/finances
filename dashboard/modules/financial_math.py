@@ -101,7 +101,14 @@ def calculate_portfolio_kpis(
     balances_df: pd.DataFrame,
     broker_account_id: str = None,
 ) -> Dict[str, Any]:
-    """Computes headline KPIs for the investment portfolio (per-broker or consolidated)."""
+    """
+    Computes headline KPIs for the investment portfolio (per-broker or consolidated investments).
+    
+    Note: 'portfolio_net_worth' (also aliased to 'total_net_worth' for backward compatibility)
+    represents the investment portfolio valuation + uninvested broker cash.
+    For the full 360° consolidated net worth across all bank, cash, platform, and investment accounts,
+    use calculate_liquidity_tiers(balances_df, positions_df)["total"].
+    """
     cost_col = "cost_basis_usd" if "cost_basis_usd" in positions_df.columns else "cost_basis_original"
     total_market_val = float(positions_df["market_value_usd"].sum()) if not positions_df.empty else 0.0
     total_cost_basis = float(positions_df[cost_col].sum()) if not positions_df.empty else 0.0
@@ -145,7 +152,7 @@ def calculate_portfolio_kpis(
         )
 
     net_dividends = gross_dividends - nra_tax_fees
-    total_net_worth = total_market_val + broker_cash
+    portfolio_net_worth = total_market_val + broker_cash
 
     return {
         "total_market_value": total_market_val,
@@ -153,12 +160,14 @@ def calculate_portfolio_kpis(
         "unrealized_pnl_usd": unrealized_pnl_usd,
         "unrealized_pnl_pct": unrealized_pnl_pct,
         "broker_cash": broker_cash,
-        "total_net_worth": total_net_worth,
+        "total_net_worth": portfolio_net_worth,  # Kept for backward compatibility
+        "portfolio_net_worth": portfolio_net_worth,
         "gross_dividends": gross_dividends,
         "nra_tax_fees": nra_tax_fees,
         "net_dividends": net_dividends,
         "net_deposits": net_deposits,
     }
+
 
 
 def reconstruct_historical_curve(
@@ -221,8 +230,9 @@ def reconstruct_historical_curve(
     df["ym"] = df["event_date"].dt.to_period("M")
 
     min_period = df["ym"].min()
-    max_period = pd.Period("2026-09", "M")
+    max_period = df["ym"].max() if not df.empty else pd.Period.now(freq="M")
     months = pd.period_range(min_period, max_period, freq="M")
+
 
     monthly_records = []
     for m in months:
@@ -295,15 +305,10 @@ def calculate_dividend_history(cashflows_df: pd.DataFrame, freq: str = "Q") -> p
     div_df = df[df["event_type"] == "dividend"]
     gross_by_period = div_df.groupby("period")["gross_amount_usd"].sum()
 
-    # NRA tax fees (only those tied to dividends/investments)
-    tax_df = df[
-        (df["event_type"] == "fee") &
-        (df["notes"].str.contains("NRA Tax", case=False, na=False)) &
-        (df["asset_id"] != "-")  # omit bank interest tax if we want pure ETF dividends, or include all
-    ]
-    # If we include all NRA tax
+    # NRA tax fees (withholding tax on US dividends/investments)
     all_tax_df = df[(df["event_type"] == "fee") & (df["notes"].str.contains("NRA Tax", case=False, na=False))]
     tax_by_period = all_tax_df.groupby("period")["gross_amount_usd"].sum()
+
 
     periods = sorted(list(set(gross_by_period.index).union(set(tax_by_period.index))))
 

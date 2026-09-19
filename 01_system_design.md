@@ -13,21 +13,22 @@ La meta de V1 no es hacer contabilidad perfecta ni análisis fiscal. La meta es 
 ## Alcance de V1
 Incluye:
 - cash y saldos en bancos/billeteras/cuentas personales,
+- plataformas de cobro laboral en el exterior (`payoneer_usd`, `deel_usd`) integradas como saldos personales líquidos de corto plazo (excluyendo contabilidad empresarial),
 - gastos mensuales agregados en buckets genéricos,
-- inversiones tradicionales (no crypto),
+- inversiones bursátiles y criptoactivos consolidados (`schwab_broker`, `iol_broker`, `binance_crypto`: BTC, ETH/BETH, Simple Earn, Staking),
 - snapshots de balances y posiciones,
-- eventos de inversión básicos (aportes, retiros, compras, ventas, fees, dividendos si aparecen),
+- eventos de inversión básicos (aportes, retiros, compras, ventas, fees, dividendos y recompensas de staking/earn),
 - consolidación en USD como moneda base,
 - revisiones semanal, mensual y trimestral.
 
 No incluye en V1:
-- crypto,
-- impuestos,
-- APIs bancarias,
+- impuestos y liquidaciones tributarias complejas,
+- APIs bancarias automáticas / screen scraping,
 - análisis item por item de consumos,
 - automatizaciones frágiles,
-- pricing engine externo complejo,
-- performance attribution avanzada.
+- finanzas compartidas / contabilidad corporativa de empresas,
+- trading especulativo intradiario, futuros, o altcoins menores.
+
 
 ## Principios de diseño
 1. **Source of truth simple**: los datos consolidados viven en CSVs legibles y portables.
@@ -125,17 +126,21 @@ No cubre todavía métricas avanzadas como TWR/MWR o benchmark formal.
 - MercadoPago ARS
 - Wise USD
 - Payoneer USD
+- Deel USD
 - Citibank USD
 - Invertir Online ARS/USD
 - Charles Schwab (cuenta/broker con cash y posiciones; se modela por holdings y saldos, no como “moneda mezclada”)
-- efectivo manual
+- Binance Crypto Exchange (cuenta/broker para activos crypto: BTC, BETH, Simple Earn y Staking)
+- efectivo manual (ARS y USD)
 
 ### Monedas V1
-- ARS
-- USD
+- ARS (pesos argentinos)
+- USD (dólares estadounidenses)
+- Activos cripto seguidos nativamente: BTC, ETH (con valuación en USD)
 
 ### Fuera de V1
-- USDT, BTC, ETH y otras crypto.
+- Altcoins menores, memecoins, trading especulativo apalancado y contabilidad corporativa de empresas.
+
 
 ## Rituales del sistema
 ### Semanal

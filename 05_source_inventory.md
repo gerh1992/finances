@@ -37,15 +37,17 @@ Ejemplos:
 - cash y saldos personales
 - bancos
 - billeteras
-- brokers e inversiones tradicionales
+- plataformas de remuneración/cobro exterior (`payoneer_usd`, `deel_usd`) como saldo personal de corto plazo
+- brokers de inversión bursátil (`schwab_broker`, `iol_broker`) y exchange cripto (`binance_crypto`)
 - gasto mensual agregado
-- efectivo manual
+- efectivo manual (ARS y USD)
 
 ### Explícitamente fuera de V1
-- crypto (USDT, BTC, ETH, etc.)
-- impuestos
-- APIs bancarias
-- trabajo/empresa/shared finances
+- impuestos y declaraciones juradas
+- APIs bancarias / screen scraping
+- contabilidad corporativa de empresas / shared business finances
+- altcoins menores, memecoins o trading especulativo
+
 
 ---
 
@@ -121,7 +123,17 @@ Ejemplos:
 - `default_currency`: USD
 - `liquidity_tier` esperado: `short_term`
 - `included_in_v1`: yes
-- `notes`: puede requerir interpretación distinta si opera más como saldo de plataforma que como banco tradicional
+- `notes`: saldo de plataforma de cobro laboral en USD; liquidez de corto plazo
+
+### `deel_usd`
+- `institution`: Deel
+- `country`: US/global
+- `account_type`: platform_balance
+- `default_currency`: USD
+- `liquidity_tier` esperado: `short_term`
+- `included_in_v1`: yes
+- `notes`: plataforma de cobro laboral en USD; saldo personal líquido de corto plazo
+
 
 ---
 

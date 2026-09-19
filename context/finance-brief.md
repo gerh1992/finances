@@ -38,7 +38,7 @@ Tablas principales:
 
 ## Qué ya está decidido
 - moneda base: `USD`
-- V1 excluye crypto e impuestos
+- V1 incluye activos cripto (Binance BTC/ETH/BETH) y excluye impuestos complejos
 - gasto se mira de forma económica, no meramente como caja bruta
 - no se debe duplicar gasto con pagos de tarjeta o transferencias internas
 - histórico mensual usa FX de cierre, no FX actual reescribiendo el pasado

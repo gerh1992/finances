@@ -95,13 +95,14 @@ def run_audit():
 
     assert round(float(iol_pos.loc["SPY", "cost_basis_usd"]), 2) == 8493.49, "IOL SPY cost_basis_usd mismatch"
     assert round(float(iol_pos.loc["XLE", "cost_basis_usd"]), 2) == 449.57, "IOL XLE cost_basis_usd mismatch"
-    assert round(float(iol_pos.loc["ADCGLOA", "cost_basis_usd"]), 2) == 131.08, "IOL ADCGLOA cost_basis_usd mismatch"
+    assert round(float(iol_pos.loc["ADCGLOA", "cost_basis_usd"]), 2) == 100.0, "IOL ADCGLOA cost_basis_usd mismatch"
 
     # Consolidated KPIs cost basis check
     cons_kpis = calculate_portfolio_kpis(positions, cashflows, balances)
-    expected_cons_cost = 123953.42 + 1514.77 + 8493.49 + 449.57 + 131.08 + 9231.44  # 143,773.77
+    expected_cons_cost = 123953.42 + 1514.77 + 8493.49 + 449.57 + 100.00 + 9231.44  # 143,742.69
     print(f"✓ Consolidated Cost Basis: ${cons_kpis['total_cost_basis']:,.2f} USD (Expected: ${expected_cons_cost:,.2f} USD)")
     assert round(cons_kpis["total_cost_basis"], 2) == round(expected_cons_cost, 2), "Consolidated cost basis mismatch"
+
 
     # 4. Check real historical curve
     curve_schwab = reconstruct_historical_curve(schwab_cf, schwab_pos, hist_val, broker_account_id="schwab_broker")

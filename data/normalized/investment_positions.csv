@@ -4,7 +4,7 @@ snapshot_date,as_of_date,broker_account_id,asset_id,asset_name,asset_class,quant
 2026-09-30,2026-09-17,schwab_broker,SCHZ,SCHWAB U.S. AGGREGATE BOND ETF,etf,373.5409,USD,8544.11,8544.11,8396.3,1.0,8396.3,-147.81,Asset Type: ETFs & Closed End Funds
 2026-09-30,2026-09-17,schwab_broker,SPY,STATE STREET SPDR S&P 500 ETF TRUST,etf,42.0,USD,17233.71,17233.71,31946.46,1.0,31946.46,14712.75,Asset Type: ETFs & Closed End Funds
 2026-09-30,2026-09-17,schwab_broker,XLE,STATE STREET ENERGY SELECT SECTOR SPDR ETF,etf,429.3738,USD,17119.79,17119.79,27608.22,1.0,27608.22,10488.43,Asset Type: ETFs & Closed End Funds
-2026-09-30,2026-09-15,iol_broker,ADCGLOA,Adcap Renta Dólar,fund,97.1668,USD,131.08,131.08,200549.3602,1.0,131.08,0.0,Mercado: BCBA | Cotización: 1.349 USD
+2026-09-30,2026-09-15,iol_broker,ADCGLOA,Adcap Renta Dólar,fund,97.1668,USD,100.0,100.0,131.08,1.0,131.08,31.08,Mercado: BCBA | Cotización: 1.349 USD
 2026-09-30,2026-09-15,iol_broker,GOOGL,Cedear Alphabet Inc. Cl. A,stock,845.0,ARS,590782.5,1514.77,8040175.0,0.0006535948,5255.02,3740.25,Mercado: BCBA | Cotización: 9515.0 ARS
 2026-09-30,2026-09-15,iol_broker,SPY,Cedear Spdr S&P 500,etf,393.0,ARS,1370040.5,8493.49,7907160.0,0.0006535948,5168.08,-3325.41,Mercado: BCBA | Cotización: 20120.0 ARS
 2026-09-30,2026-09-15,iol_broker,XLE,Cedear Energy Select Sector Sp,etf,18.0,ARS,91145.7,449.57,946800.0,0.0006535948,618.82,169.25,Mercado: BCBA | Cotización: 52600.0 ARS
