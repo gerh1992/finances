@@ -1,7 +1,9 @@
 # 07 — Especificación Técnica y de Producto: Dashboard de Inversiones & Portal Financiero Integral
 
 > **Documento de especificación para implementación directa por IA.**  
-> Este documento contiene todas las definiciones de arquitectura, contratos de datos, fórmulas financieras, diseño de interfaz y guía de construcción paso a paso para implementar el **Portal Financiero Personal** con el **Módulo de Inversiones (Charles Schwab)** 100% operativo en su Fase 1.
+> Este documento contiene todas las definiciones de arquitectura, contratos de datos, fórmulas financieras, diseño de interfaz y guía de construcción paso a paso para implementar el **Portal Financiero Personal**.
+> 
+> *Nota de Arquitectura*: La interfaz de usuario ha sido unificada en el visualizador central de `ai-systems` (`utils/visualizer/modules/finances/`), ejecutándose mediante `make run` desde la raíz. El presente repositorio mantiene la propiedad y custodia de las fuentes canónicas de datos (`data/normalized/`), reglas y contratos de cálculo.
 
 ---
 
